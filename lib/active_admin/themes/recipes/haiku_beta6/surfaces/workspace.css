@@ -1,0 +1,30 @@
+/* lib/active_admin/themes/recipes/haiku_beta6/surfaces/workspace.css */
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace {
+  min-height: 660px;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace
+  > :not(.haiku-beta6-screen-header, .haiku-beta6-navigation) {
+  padding: 1.1rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace-grid {
+  align-items: start;
+  display: grid;
+  gap: var(--haiku-beta6-gap);
+  grid-template-columns: minmax(0, 1fr) 290px;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-footer {
+  background: var(--haiku-beta6-panel);
+  border: 1px solid var(--haiku-beta6-border);
+  border-radius: var(--haiku-beta6-radius);
+  box-shadow: inset 0 1px var(--haiku-beta6-shine);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-top: 1.25rem;
+  padding: 0.4rem 0.55rem;
+}

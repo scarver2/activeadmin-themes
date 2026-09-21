@@ -4,6 +4,7 @@
 require "active_admin/themes/amigaos_4"
 require "active_admin/themes/aros_zune"
 require "active_admin/themes/composition"
+require "active_admin/themes/haiku_beta6"
 require "active_admin/themes/mui"
 require "active_admin/themes/registry"
 require "active_admin/themes/skin"
@@ -18,7 +19,9 @@ require "active_admin/themes/workbench_3"
 
 module ActiveAdmin
   module Themes
-    THEME_BUILDERS = [V3, TexasBluebonnet, Workbench13, Workbench2, Workbench3, Mui, AmigaOS4, AROSZune].freeze
+    THEME_BUILDERS = [
+      V3, TexasBluebonnet, Workbench13, Workbench2, Workbench3, Mui, AmigaOS4, AROSZune, HaikuBeta6
+    ].freeze
 
     def self.registry
       Registry.new.tap do |registry|

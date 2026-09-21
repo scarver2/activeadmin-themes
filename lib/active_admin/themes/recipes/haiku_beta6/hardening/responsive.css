@@ -1,0 +1,53 @@
+/* lib/active_admin/themes/recipes/haiku_beta6/hardening/responsive.css */
+@media (max-width: 1100px) {
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-side-window {
+    margin-top: 0;
+    max-width: 440px;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-wide-window {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace {
+    font-size: 0.875rem;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace
+    > :not(.haiku-beta6-screen-header, .haiku-beta6-navigation) {
+    padding: 0.6rem;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-screen-header {
+    gap: 0.25rem;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-screen-header > span:last-child {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-group {
+    gap: 0.5rem;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] a.haiku-beta6-launcher {
+    min-width: min(100%, 140px);
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-group > p:last-child {
+    text-align: left;
+    width: 100%;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-window-header {
+    max-width: calc(100% - 1.25rem);
+    min-width: min(74%, 16rem);
+  }
+}
