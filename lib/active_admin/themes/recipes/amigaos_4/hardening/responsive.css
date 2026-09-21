@@ -1,0 +1,51 @@
+/* lib/active_admin/themes/recipes/amigaos_4/hardening/responsive.css */
+@media (max-width: 1100px) {
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-side-window {
+    margin-top: 0;
+    max-width: 460px;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-wide-window {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace {
+    font-size: 0.875rem;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace
+    > :not(.amigaos-4-screen-header, .amigaos-4-navigation) {
+    padding: 0.65rem;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-screen-header {
+    gap: 0.25rem;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-screen-header > span {
+    width: 100%;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-screen-header > span:last-child {
+    margin-left: 0;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-launcher-group {
+    gap: 0.55rem;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-launcher {
+    min-width: 88px;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-launcher-group > p:last-child {
+    text-align: left;
+    width: 100%;
+  }
+}

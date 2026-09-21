@@ -1,0 +1,55 @@
+/* lib/active_admin/themes/recipes/amigaos_4/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace *,
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace *::before,
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body[data-activeadmin-theme="amigaos_4"] {
+    --amigaos-4-desktop: Canvas;
+    --amigaos-4-desktop-deep: Canvas;
+    --amigaos-4-surface: Canvas;
+    --amigaos-4-surface-soft: Canvas;
+    --amigaos-4-field: Field;
+    --amigaos-4-text: CanvasText;
+    --amigaos-4-muted: CanvasText;
+    --amigaos-4-shine: CanvasText;
+    --amigaos-4-shadow: CanvasText;
+    --amigaos-4-deep-shadow: CanvasText;
+    --amigaos-4-active: Highlight;
+    --amigaos-4-active-deep: Highlight;
+    --amigaos-4-active-soft: Highlight;
+    --amigaos-4-active-text: HighlightText;
+    --amigaos-4-accent: LinkText;
+    --amigaos-4-success: LinkText;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace,
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-screen-header,
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-navigation,
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window-header {
+    background-image: none;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace
+    :is(a, button, input, select, summary, [tabindex]):focus-visible {
+    box-shadow: none;
+    outline: 3px solid Highlight;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window-header::after {
+    background: none;
+    border-top: 2px solid CanvasText;
+  }
+
+  body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace
+    :is(.amigaos-4-form select, .amigaos-4-primary-action, .amigaos-4-secondary-action) {
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}

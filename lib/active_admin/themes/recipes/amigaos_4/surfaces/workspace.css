@@ -1,0 +1,30 @@
+/* lib/active_admin/themes/recipes/amigaos_4/surfaces/workspace.css */
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace {
+  min-height: 650px;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace
+  > :not(.amigaos-4-screen-header, .amigaos-4-navigation) {
+  padding: 1.2rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace-grid {
+  align-items: start;
+  display: grid;
+  gap: var(--amigaos-4-layout-gap);
+  grid-template-columns: minmax(0, 1fr) 300px;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-footer {
+  background: linear-gradient(to bottom, rgb(250 252 253 / 94%), rgb(206 220 228 / 94%));
+  border: 1px solid var(--amigaos-4-deep-shadow);
+  border-radius: var(--amigaos-4-frame-radius);
+  box-shadow: inset 1px 1px var(--amigaos-4-shine), 0 3px 7px rgb(24 47 63 / 22%);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-top: 1.35rem;
+  padding: 0.45rem 0.6rem;
+}

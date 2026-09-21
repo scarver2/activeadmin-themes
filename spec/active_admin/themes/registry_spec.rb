@@ -27,7 +27,7 @@ RSpec.describe ActiveAdmin::Themes::Registry do
   end
 
   it "exposes the default v3 catalog" do
-    keys = %w[v3 texas_bluebonnet workbench_13 workbench_2 workbench_3 mui]
+    keys = %w[v3 texas_bluebonnet workbench_13 workbench_2 workbench_3 mui amigaos_4]
 
     expect(keys.map { |key| ActiveAdmin::Themes.registry.fetch(key).key.to_s }).to eq(keys)
   end
@@ -40,6 +40,6 @@ RSpec.describe ActiveAdmin::Themes::Registry do
     first = ActiveAdmin::Themes.registry
     second = ActiveAdmin::Themes.registry
     first.register(theme.with(key: :custom))
-    expect(second.keys.map(&:to_s)).to eq(%w[v3 texas_bluebonnet workbench_13 workbench_2 workbench_3 mui])
+    expect(second.keys.map(&:to_s)).to eq(%w[v3 texas_bluebonnet workbench_13 workbench_2 workbench_3 mui amigaos_4])
   end
 end
