@@ -1,0 +1,91 @@
+/* lib/active_admin/themes/recipes/mui/components/windows.css */
+body[data-activeadmin-theme="mui"] .mui-window {
+  background: var(--mui-surface);
+  border-color: var(--mui-shine) var(--mui-shadow) var(--mui-shadow)
+    var(--mui-shine);
+  border-style: solid;
+  border-radius: var(--mui-frame-radius);
+  border-width: 2px;
+  box-shadow: 0 2px 5px color-mix(in srgb, var(--mui-deep-shadow) 42%, transparent);
+  min-width: 0;
+  overflow: clip;
+}
+
+body[data-activeadmin-theme="mui"] .mui-primary-window {
+  min-width: 0;
+}
+
+body[data-activeadmin-theme="mui"] .mui-side-window {
+  margin-top: 1.25rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-wide-window {
+  grid-column: 1 / -1;
+  margin-left: 1.25rem;
+  max-width: 800px;
+}
+
+body[data-activeadmin-theme="mui"] .mui-window-header {
+  align-items: center;
+  background: var(--mui-surface-soft);
+  border-bottom: 1px solid var(--mui-shadow);
+  color: var(--mui-text);
+  display: flex;
+  font: inherit;
+  font-weight: 700;
+  gap: 0.5rem;
+  min-height: 32px;
+  padding: 0.3rem 0.55rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-window-header::after {
+  background: linear-gradient(to right, var(--mui-active-soft), transparent);
+  content: "";
+  flex: 1;
+  height: 2px;
+}
+
+body[data-activeadmin-theme="mui"]
+  :is(.mui-primary-window, .mui-wide-window)
+  > .mui-window-header {
+  background: var(--mui-active);
+  color: var(--mui-active-text);
+}
+
+body[data-activeadmin-theme="mui"]
+  :is(.mui-primary-window, .mui-wide-window)
+  > .mui-window-header::after {
+  background: linear-gradient(to right, var(--mui-shine), transparent);
+}
+
+body[data-activeadmin-theme="mui"] .mui-window-content {
+  padding: 0.85rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-side-window > .mui-window-content {
+  display: grid;
+  gap: 1rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-wide-window > .mui-window-content {
+  display: grid;
+  gap: 0.75rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-workspace summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-block: 0.6rem;
+  text-decoration: underline;
+}
+
+body[data-activeadmin-theme="mui"] .mui-window-actions {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-window-actions a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+}

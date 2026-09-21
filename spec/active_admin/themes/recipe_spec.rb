@@ -98,6 +98,17 @@ RSpec.describe ActiveAdmin::Themes::Recipe do
     expect(workbench.instructions).to include('@import "./active_admin_workbench_3.css";')
   end
 
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs MUI through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    mui = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "mui"
+    )
+
+    expect(mui.install).to eq(:created)
+    expect(File.binread(File.join(root, mui.destination))).to eq(ActiveAdmin::Themes::Mui.theme.source)
+    expect(mui.instructions).to include('@import "./active_admin_mui.css";')
+  end
+
   it "requires an existing entrypoint" do
     File.unlink(File.join(root, "admin.css"))
     expect { recipe }.to raise_error(ArgumentError, "styling entrypoint does not exist")

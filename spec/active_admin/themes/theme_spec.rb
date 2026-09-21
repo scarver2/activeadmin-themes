@@ -113,4 +113,15 @@ RSpec.describe ActiveAdmin::Themes::Theme do
     )
     expect(workbench.source).to eq(ActiveAdmin::Themes::Recipes::Workbench3.source)
   end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers MUI as an independent configurable-toolkit full theme" do # rubocop:disable RSpec/ExampleLength
+    mui = ActiveAdmin::Themes::Mui.theme
+
+    expect([mui.key, mui.skin.key].map(&:to_s)).to eq(%w[mui mui])
+    expect(mui.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[mui-launcher-art mui-primary-window]
+    )
+    expect(mui.source).to eq(ActiveAdmin::Themes::Recipes::Mui.source)
+  end
 end

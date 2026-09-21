@@ -1,0 +1,66 @@
+/* lib/active_admin/themes/recipes/mui/components/data.css */
+body[data-activeadmin-theme="mui"] .mui-status {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-data-region {
+  background: var(--mui-field);
+  border-color: var(--mui-shadow) var(--mui-shine) var(--mui-shine)
+    var(--mui-shadow);
+  border-style: solid;
+  border-radius: var(--mui-inner-radius);
+  border-width: 2px;
+  overflow-x: auto;
+}
+
+body[data-activeadmin-theme="mui"] .mui-data-table {
+  border-collapse: collapse;
+  color: inherit;
+  font: inherit;
+  width: 100%;
+}
+
+body[data-activeadmin-theme="mui"] .mui-data-table caption {
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  text-align: left;
+}
+
+body[data-activeadmin-theme="mui"] .mui-data-table :is(th, td) {
+  border-bottom: 1px solid color-mix(in srgb, var(--mui-shadow) 50%, var(--mui-field));
+  font-weight: 400;
+  padding: 0.55rem 0.45rem;
+  text-align: left;
+}
+
+body[data-activeadmin-theme="mui"] .mui-data-table thead {
+  background: var(--mui-surface-soft);
+  border-bottom: 2px solid var(--mui-shadow);
+  color: var(--mui-text);
+}
+
+body[data-activeadmin-theme="mui"] .mui-data-table th a {
+  align-items: center;
+  display: inline-flex;
+  font-weight: 700;
+  min-height: 32px;
+}
+
+body[data-activeadmin-theme="mui"] .mui-data-table tbody tr:focus-within,
+body[data-activeadmin-theme="mui"] .mui-data-table tbody tr:hover {
+  background: var(--mui-active-soft);
+  color: var(--mui-text);
+}
+
+body[data-activeadmin-theme="mui"] .mui-status-tag {
+  background: var(--mui-surface-soft);
+  border-color: var(--mui-shine) var(--mui-shadow) var(--mui-shadow)
+    var(--mui-shine);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  padding: 0.1rem 0.35rem;
+  white-space: nowrap;
+}
