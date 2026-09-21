@@ -19,6 +19,19 @@ RSpec.describe ActiveAdmin::Themes::Recipes::Workbench13 do
       window_actions window_content window_header workspace workspace_grid
     ]
   end
+  let(:preserved_rules) do
+    [
+      ".workbench-13-screen-header > span:last-child {\n  font-size: 0.75rem;\n  margin-left: auto;",
+      ".workbench-13-launcher-group > p:last-child {\n  margin-left: auto !important;\n  padding: 0.5rem;",
+      ".workbench-13-launcher-group > p:last-child small {\n  font-size: 0.75rem;",
+      ".workbench-13-side-window > .workbench-13-window-content {\n  display: grid;\n  gap: 1rem;",
+      ".workbench-13-wide-window > .workbench-13-window-content {\n  display: grid;\n  gap: 0.75rem;",
+      ".workbench-13-workspace summary {\n  cursor: pointer;\n  min-height: 44px;",
+      ".workbench-13-screen-header > span {\n    width: 100%;",
+      ".workbench-13-screen-header > span:last-child {\n    margin-left: 0;",
+      ".workbench-13-launcher-group > p:last-child {\n    text-align: left;\n    width: 100%;"
+    ]
+  end
 
   it "defines explicit skin and composition manifests in cascade order" do
     expect(described_class::PARTS).to eq(expected_parts)
@@ -48,5 +61,21 @@ RSpec.describe ActiveAdmin::Themes::Recipes::Workbench13 do
 
   it "publishes only the approved stable composition slots" do
     expect(ActiveAdmin::Themes::Workbench13::COMPOSITION.slots.keys).to match_array(expected_slots)
+  end
+
+  it "keeps the primary action above the shared control background in the cascade" do
+    source = described_class.source
+    shared = ":where(.workbench-13-form select, .workbench-13-primary-action, .workbench-13-secondary-action)"
+    primary = 'body[data-activeadmin-theme="workbench-13"] .workbench-13-primary-action {'
+
+    expect(source).to include("--workbench-13-orange: #ffae38", "#{primary}\n  background: var(--workbench-13-orange)")
+    expect(source.index(shared)).to be < source.index(primary)
+  end
+
+  it "preserves the approved labels, window content, summary, and narrow-screen treatment" do
+    source = described_class.source
+
+    expect(source).to include(*preserved_rules)
+    expect(source).not_to include(".workbench-13-screen-header > * {")
   end
 end

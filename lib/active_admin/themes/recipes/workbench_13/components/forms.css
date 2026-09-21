@@ -9,7 +9,7 @@ body[data-activeadmin-theme="workbench-13"] .workbench-13-form select {
 }
 
 body[data-activeadmin-theme="workbench-13"]
-  :is(.workbench-13-form select, .workbench-13-primary-action, .workbench-13-secondary-action) {
+  :where(.workbench-13-form select, .workbench-13-primary-action, .workbench-13-secondary-action) {
   background: var(--workbench-13-white);
   border: 2px solid var(--workbench-13-ink);
   border-radius: 0;

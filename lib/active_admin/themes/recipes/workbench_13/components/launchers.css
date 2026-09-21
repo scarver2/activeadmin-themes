@@ -42,3 +42,13 @@ body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-art::after {
   top: 6px;
   width: 24px;
 }
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-group > p:last-child {
+  margin-left: auto !important;
+  padding: 0.5rem;
+  text-align: right;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-group > p:last-child small {
+  font-size: 0.75rem;
+}
