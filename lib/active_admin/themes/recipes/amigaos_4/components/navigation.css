@@ -1,0 +1,61 @@
+/* lib/active_admin/themes/recipes/amigaos_4/components/navigation.css */
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-screen-header {
+  align-items: center;
+  background: linear-gradient(to bottom, #fefefe, #d9e4eb);
+  border-bottom: 1px solid var(--amigaos-4-deep-shadow);
+  box-shadow: inset 0 1px var(--amigaos-4-shine), 0 2px 8px rgb(25 43 55 / 28%);
+  color: var(--amigaos-4-text);
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  gap: 0.35rem 1.25rem;
+  justify-content: space-between;
+  min-height: 38px;
+  padding: 0.4rem 0.75rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-screen-header > span:first-child::before {
+  background: linear-gradient(135deg, var(--amigaos-4-active), var(--amigaos-4-accent));
+  border: 1px solid var(--amigaos-4-active-deep);
+  border-radius: 50%;
+  box-shadow: inset 2px 2px rgb(255 255 255 / 55%);
+  content: "";
+  display: inline-block;
+  height: 0.85rem;
+  margin-right: 0.45rem;
+  vertical-align: -0.05rem;
+  width: 0.85rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-screen-header > span:last-child {
+  color: var(--amigaos-4-muted);
+  font-size: 0.75rem;
+  margin-left: auto;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-navigation {
+  background: linear-gradient(to bottom, #dce9f1, #b9cbd7);
+  border-bottom: 1px solid var(--amigaos-4-deep-shadow);
+  box-shadow: inset 0 1px var(--amigaos-4-shine);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  padding: 0.25rem 0.4rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-navigation a {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--amigaos-4-control-radius);
+  display: inline-flex;
+  min-height: 44px;
+  padding: 0.4rem 0.75rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-navigation a:hover {
+  background: linear-gradient(to bottom, var(--amigaos-4-active-soft), #8fc7e9);
+  border-color: var(--amigaos-4-shine) var(--amigaos-4-shadow) var(--amigaos-4-shadow)
+    var(--amigaos-4-shine);
+  color: var(--amigaos-4-text);
+}

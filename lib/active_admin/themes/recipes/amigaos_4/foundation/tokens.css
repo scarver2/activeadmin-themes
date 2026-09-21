@@ -1,0 +1,23 @@
+/* lib/active_admin/themes/recipes/amigaos_4/foundation/tokens.css */
+body[data-activeadmin-theme="amigaos_4"] {
+  --amigaos-4-desktop: #58788d;
+  --amigaos-4-desktop-deep: #36566d;
+  --amigaos-4-surface: #e7edf1;
+  --amigaos-4-surface-soft: #f5f8fa;
+  --amigaos-4-field: #ffffff;
+  --amigaos-4-text: #172632;
+  --amigaos-4-muted: #4c6373;
+  --amigaos-4-shine: #ffffff;
+  --amigaos-4-shadow: #8397a5;
+  --amigaos-4-deep-shadow: #344b5b;
+  --amigaos-4-active: #197ac1;
+  --amigaos-4-active-deep: #0b4f8c;
+  --amigaos-4-active-soft: #b9ddf3;
+  --amigaos-4-active-text: #ffffff;
+  --amigaos-4-accent: #ef9d25;
+  --amigaos-4-success: #3e8b4d;
+  --amigaos-4-frame-radius: 0.65rem;
+  --amigaos-4-control-radius: 0.35rem;
+  --amigaos-4-layout-gap: 0.9rem;
+  color-scheme: light;
+}
