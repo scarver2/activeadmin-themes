@@ -28,8 +28,12 @@
     gap: 0.25rem;
   }
 
-  body[data-activeadmin-theme="workbench-13"] .workbench-13-screen-header > * {
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-screen-header > span {
     width: 100%;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-screen-header > span:last-child {
+    margin-left: 0;
   }
 
   body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-group {
@@ -38,5 +42,10 @@
 
   body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher {
     min-width: 80px;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-group > p:last-child {
+    text-align: left;
+    width: 100%;
   }
 }
