@@ -90,7 +90,7 @@ recipes/workbench_13/
 
 The host opts in with `data-activeadmin-theme="workbench-13"` and applies classes from `Workbench13::COMPOSITION.slots`. Its presentation is intentionally fixed: a host dark preference does not create a fictitious dark Workbench. Forced-colors remains user-controlled and is the only token substitution.
 
-The stable slots are:
+The 24 stable slots are:
 
 | Slot | CSS class |
 | --- | --- |
