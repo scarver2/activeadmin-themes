@@ -1,0 +1,88 @@
+/* lib/active_admin/themes/recipes/haiku_beta6/components/windows.css */
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-window {
+  background: var(--haiku-beta6-panel);
+  border: 1px solid var(--haiku-beta6-shadow);
+  border-radius: var(--haiku-beta6-window-radius);
+  box-shadow: 0 4px 12px rgb(17 17 17 / 28%);
+  min-width: 0;
+  overflow: clip;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-primary-window {
+  min-width: 0;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-side-window {
+  margin-top: 1.35rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-wide-window {
+  grid-column: 1 / -1;
+  margin-left: 1.1rem;
+  max-width: 820px;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-window-header {
+  align-items: center;
+  background: linear-gradient(to bottom, #f8f8f8, var(--haiku-beta6-control));
+  border: 1px solid var(--haiku-beta6-border);
+  border-left: 0;
+  border-radius: 0 var(--haiku-beta6-window-radius) 0 0;
+  border-top: 0;
+  color: var(--haiku-beta6-text);
+  display: flex;
+  font-weight: 700;
+  gap: 0.5rem;
+  min-height: 32px;
+  padding: 0.3rem 0.65rem;
+  width: fit-content;
+}
+
+body[data-activeadmin-theme="haiku_beta6"]
+  :is(.haiku-beta6-primary-window, .haiku-beta6-wide-window)
+  > .haiku-beta6-window-header {
+  background: linear-gradient(to bottom, #ffe36a, var(--haiku-beta6-tab));
+  border-color: color-mix(in srgb, var(--haiku-beta6-tab) 55%, var(--haiku-beta6-shadow));
+  color: var(--haiku-beta6-tab-text);
+  min-width: min(72%, 34rem);
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-window-header::before {
+  background: var(--haiku-beta6-control);
+  border: 1px solid var(--haiku-beta6-shadow);
+  border-radius: 50%;
+  box-shadow: inset 1px 1px var(--haiku-beta6-shine);
+  content: "";
+  flex: 0 0 0.72rem;
+  height: 0.72rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-window-content {
+  background: var(--haiku-beta6-panel);
+  border-top: 1px solid var(--haiku-beta6-border);
+  padding: 0.85rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-side-window > .haiku-beta6-window-content,
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-wide-window > .haiku-beta6-window-content {
+  display: grid;
+  gap: 0.85rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-block: 0.6rem;
+  text-decoration: underline;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-window-actions {
+  font-size: 0.8rem;
+  padding-top: 0.85rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-window-actions a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+}

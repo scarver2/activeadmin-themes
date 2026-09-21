@@ -1,0 +1,55 @@
+/* lib/active_admin/themes/recipes/haiku_beta6/components/navigation.css */
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-screen-header {
+  align-items: center;
+  background: linear-gradient(to bottom, var(--haiku-beta6-panel-soft), var(--haiku-beta6-panel));
+  border-bottom: 1px solid var(--haiku-beta6-shadow);
+  box-shadow: inset 0 1px var(--haiku-beta6-shine);
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  gap: 0.35rem 1rem;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 0.35rem 0.55rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-screen-header > span:first-child {
+  background: var(--haiku-beta6-tab);
+  border: 1px solid color-mix(in srgb, var(--haiku-beta6-tab) 60%, var(--haiku-beta6-shadow));
+  border-radius: var(--haiku-beta6-radius);
+  box-shadow: inset 1px 1px rgb(255 255 255 / 52%);
+  padding: 0.25rem 0.55rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-screen-header > span:last-child {
+  color: var(--haiku-beta6-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-navigation {
+  background: var(--haiku-beta6-panel);
+  border-bottom: 1px solid var(--haiku-beta6-shadow);
+  box-shadow: inset 0 1px var(--haiku-beta6-shine);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  padding: 0.28rem 0.45rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-navigation a {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--haiku-beta6-radius);
+  display: inline-flex;
+  min-height: 42px;
+  padding: 0.35rem 0.65rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-navigation a:hover {
+  background: var(--haiku-beta6-highlight);
+  border-color: color-mix(in srgb, var(--haiku-beta6-highlight) 55%, var(--haiku-beta6-shadow));
+  color: var(--haiku-beta6-selection-text);
+}

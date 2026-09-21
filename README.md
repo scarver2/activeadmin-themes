@@ -33,6 +33,8 @@ The catalog also includes `:texas_bluebonnet`, the first full theme built on the
 
 `:aros_zune` translates AROS's open-source Zune object grammar into an original warm cream, blue, and amber workspace. It preserves semantic, font-sensitive, user-configurable layout principles without copying AROS source, preferences, icons, fonts, screenshots, marks, or runtime behavior.
 
+`:haiku_beta6` translates Haiku R1/beta6's clear desktop and Tracker-era utility grammar into an original blue, gray, white, and iconic-yellow workspace. It preserves the partial-width active tab and clean control hierarchy without copying Haiku source, icons, fonts, screenshots, marks, or window-manager behavior.
+
 ```bash
 bundle exec rake 'activeadmin_themes:install[texas_bluebonnet,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[workbench_13,app/assets/stylesheets/active_admin.css]'
@@ -41,6 +43,7 @@ bundle exec rake 'activeadmin_themes:install[workbench_3,app/assets/stylesheets/
 bundle exec rake 'activeadmin_themes:install[mui,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[amigaos_4,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[aros_zune,app/assets/stylesheets/active_admin.css]'
+bundle exec rake 'activeadmin_themes:install[haiku_beta6,app/assets/stylesheets/active_admin.css]'
 ```
 
 See [Theme composition architecture](docs/theme-compositions.md) for the host markup contract and migration boundary.
