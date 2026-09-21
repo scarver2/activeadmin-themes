@@ -1,0 +1,68 @@
+/* lib/active_admin/themes/recipes/workbench_3/components/launchers.css */
+body[data-activeadmin-theme="workbench-3"] .workbench-3-launcher-group {
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+body[data-activeadmin-theme="workbench-3"] a.workbench-3-launcher {
+  display: grid;
+  gap: 0.4rem;
+  justify-items: center;
+  min-width: 104px;
+  padding: 0.45rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="workbench-3"] a.workbench-3-launcher:hover {
+  background: var(--workbench-3-active);
+  color: var(--workbench-3-active-text);
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-launcher-art {
+  background: var(--workbench-3-surface);
+  border-color: var(--workbench-3-shine) var(--workbench-3-shadow) var(--workbench-3-shadow)
+    var(--workbench-3-shine);
+  border-style: solid;
+  border-width: 3px;
+  display: block;
+  height: 38px;
+  position: relative;
+  width: 68px;
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-launcher-art::before {
+  background: var(--workbench-3-shine);
+  border: 2px solid var(--workbench-3-text);
+  content: "";
+  height: 14px;
+  left: 7px;
+  position: absolute;
+  top: 5px;
+  width: 27px;
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-launcher-art::after {
+  background: var(--workbench-3-active);
+  border: 2px solid var(--workbench-3-text);
+  content: "";
+  height: 9px;
+  position: absolute;
+  right: 7px;
+  top: 20px;
+  width: 35px;
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-launcher-group > p:last-child {
+  background: var(--workbench-3-surface);
+  border: 1px solid var(--workbench-3-shadow);
+  margin-left: auto !important;
+  padding: 0.4rem;
+  text-align: right;
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-launcher-group > p:last-child small {
+  font-size: 0.75rem;
+}
