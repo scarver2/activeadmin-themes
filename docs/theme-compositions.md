@@ -121,6 +121,14 @@ The 24 stable slots are:
 
 The launcher illustration is original CSS geometry owned by this composition. It is not an ordinary functional icon and does not expand or depend on the semantic icon registry. The host continues to own semantic HTML, labels, routes, authorization, data, interactions, and the decision to use Rails or React.
 
+## Workbench 2.x
+
+Workbench 2.x deliberately preserves the same stable presentation-role vocabulary as Workbench 1.3 while changing the entire historical grammar beneath those roles. The explicit hierarchy is identical in shape and independently composed from `recipes/workbench_2/`; it does not import, alias, or mutate Workbench 1.3 CSS.
+
+The host opts in with `data-activeadmin-theme="workbench-2"` and classes from `Workbench2::COMPOSITION.slots`. Each of the 24 Workbench 1.3 role names is available under an independent `workbench-2-*` class. This lets a Showcase consumer prove the same semantic page across both lineages without putting release-specific layout decisions in Rails or React.
+
+Its surface is fixed rather than color-scheme adaptive. The four-pen pseudo-3D model uses semantic surface, text, shine, shadow, fill, and fill-text tokens; `forced-colors` is the sole token substitution. Full historical provenance and the source-to-adaptation ledger are recorded in [Workbench 2.x theme provenance](workbench-2.md).
+
 ## Showcase Migration Follow-up
 
 Showcase should replace its page-scoped monolithic CSS with the installed gem recipe, put the theme data attribute on `body`, apply the documented slot classes to its existing markup, and delete the promoted CSS. Its Account Explorer endpoint, React island, fallback, table semantics, routes, and tests remain Showcase-owned. Fresh exact-head desktop/narrow light/dark screenshots are required after that migration; the historical PR #73 images establish design intent but do not prove the new installed path.

@@ -11,6 +11,7 @@
 - [V3 acceptance ledger](acceptance-ledger.md)
 - [Theme composition architecture](theme-compositions.md)
 - [Workbench 1.3 theme provenance](workbench-13.md)
+- [Workbench 2.x theme provenance](workbench-2.md)
 
 Deployment, operations, observability, and packaging are omitted because this repository ships a RubyGem, not a running service or end-user application. Distribution guidance will precede the first release.
 

@@ -10,6 +10,7 @@ require "active_admin/themes/texas_bluebonnet"
 require "active_admin/themes/v3"
 require "active_admin/themes/version"
 require "active_admin/themes/workbench_13"
+require "active_admin/themes/workbench_2"
 
 module ActiveAdmin
   module Themes
@@ -18,6 +19,7 @@ module ActiveAdmin
         registry.register(V3.theme)
         registry.register(TexasBluebonnet.theme)
         registry.register(Workbench13.theme)
+        registry.register(Workbench2.theme)
       end
     end
   end

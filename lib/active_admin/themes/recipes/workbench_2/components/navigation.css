@@ -1,0 +1,39 @@
+/* lib/active_admin/themes/recipes/workbench_2/components/navigation.css */
+body[data-activeadmin-theme="workbench-2"] .workbench-2-screen-header {
+  align-items: center;
+  background: var(--workbench-2-text);
+  color: var(--workbench-2-surface);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  justify-content: space-between;
+  min-height: 26px;
+  padding: 0.2rem 0.55rem;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-screen-header > span:last-child {
+  font-size: 0.75rem;
+  margin-left: auto;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-navigation {
+  border-bottom: 2px solid var(--workbench-2-shadow);
+  box-shadow: inset 0 -1px 0 var(--workbench-2-shine);
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline: 0.35rem;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-navigation a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+  padding: 0.45rem 0.7rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-navigation a:hover {
+  background: var(--workbench-2-fill);
+  color: var(--workbench-2-fill-text);
+  text-decoration: underline;
+}
