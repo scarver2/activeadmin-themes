@@ -1,0 +1,21 @@
+/* lib/active_admin/themes/recipes/texas_bluebonnet/hardening/responsive.css */
+@media (max-width: 1050px) {
+  .bluebonnet-content { grid-template-columns: minmax(0, 1fr); }
+  .bluebonnet-support { border-inline: 0; border-top: 1px solid var(--aat-border); padding-inline: 0; }
+  .bluebonnet-support dl { display: grid; grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  body[data-activeadmin-theme="texas-bluebonnet"] > div:has([data-test-site-title]) { padding-inline: 8px; }
+  body[data-activeadmin-theme="texas-bluebonnet"] [data-test-site-title] { font-size: 13px; }
+  body[data-activeadmin-theme="texas-bluebonnet"] [data-drawer-show="main-menu"] { margin-inline-end: 2px; }
+  .bluebonnet-workspace { padding-inline: 18px; }
+  .bluebonnet-heading { display: block; padding: 25px 0; }
+  .bluebonnet-action { display: inline-flex; margin-top: 20px; min-height: 44px; }
+  .bluebonnet-eyebrow span { display: block; margin: 6px 0 0; }
+  .bluebonnet-source { max-width: 130px; text-align: end; }
+  .bluebonnet-toolbar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bluebonnet-toolbar :is(input, select, button) { min-height: 44px; }
+  .bluebonnet-data-table { min-width: 640px; }
+  .bluebonnet-footnote { flex-direction: column; gap: 4px; }
+}

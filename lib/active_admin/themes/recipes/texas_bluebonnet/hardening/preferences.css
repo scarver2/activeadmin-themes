@@ -1,0 +1,9 @@
+/* lib/active_admin/themes/recipes/texas_bluebonnet/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="texas-bluebonnet"] #main-menu { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .bluebonnet-workspace :is(a, button, input, select) { forced-color-adjust: auto; }
+  .bluebonnet-current { border-bottom: 3px solid Highlight; }
+}

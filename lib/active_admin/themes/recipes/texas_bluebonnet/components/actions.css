@@ -1,0 +1,13 @@
+/* lib/active_admin/themes/recipes/texas_bluebonnet/components/actions.css */
+.bluebonnet-workspace .bluebonnet-action {
+  align-items: center;
+  background: var(--aat-chrome);
+  border: 1px solid var(--aat-border);
+  color: var(--aat-on-chrome);
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 26px;
+  padding: 13px 17px;
+  text-decoration: none;
+}

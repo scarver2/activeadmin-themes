@@ -1,0 +1,32 @@
+/* lib/active_admin/themes/recipes/texas_bluebonnet/components/support.css */
+.bluebonnet-support {
+  border-inline-start: 1px solid var(--aat-border);
+  padding: 26px 0 24px 24px;
+}
+.bluebonnet-support h2 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.2;
+  margin: 14px 0;
+}
+.bluebonnet-support > p:not(.bluebonnet-eyebrow), .bluebonnet-support details {
+  color: var(--aat-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.bluebonnet-support dl {
+  border-block: 1px solid var(--aat-border);
+  margin-block: 22px;
+  padding-block: 15px;
+}
+.bluebonnet-support dt {
+  color: var(--aat-muted);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.bluebonnet-support dd { font-size: 12px; margin: 2px 0 14px; }
+.bluebonnet-support dd:last-child { margin-bottom: 0; }
+.bluebonnet-support > a { display: block; font-size: 12px; margin-top: 22px; }
+.bluebonnet-support summary { color: var(--aat-text); cursor: pointer; min-height: 44px; }

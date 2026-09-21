@@ -28,6 +28,7 @@ RSpec.describe ActiveAdmin::Themes::Registry do
 
   it "exposes the default v3 catalog" do
     expect(ActiveAdmin::Themes.registry.fetch(:v3).key).to eq(:v3)
+    expect(ActiveAdmin::Themes.registry.fetch(:texas_bluebonnet).key).to eq(:texas_bluebonnet)
   end
 
   it "rejects unknown theme keys" do
@@ -38,6 +39,6 @@ RSpec.describe ActiveAdmin::Themes::Registry do
     first = ActiveAdmin::Themes.registry
     second = ActiveAdmin::Themes.registry
     first.register(theme.with(key: :custom))
-    expect(second.keys).to eq([:v3])
+    expect(second.keys).to eq(%i[v3 texas_bluebonnet])
   end
 end

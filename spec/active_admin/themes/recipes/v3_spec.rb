@@ -37,19 +37,11 @@ RSpec.describe ActiveAdmin::Themes::Recipes::V3 do
     expect(source.index("Native AA4 drawer")).to be < source.index("Index presentation only")
   end
 
-  context "with controlled empty concern files" do
-    let(:contents) { { "foundation/base" => "body { color: red; }", "components/tables" => "table { color: blue; }" } }
-
-    before do
-      allow(File).to receive(:binread).and_call_original
-      described_class::PARTS.each do |part|
-        path = File.expand_path("../../../../lib/active_admin/themes/recipes/v3/#{part}.css", __dir__)
-        allow(File).to receive(:binread).with(path).and_return(contents.fetch(part, ""))
-      end
-    end
-
-    it "skips leading, intermediate and trailing empty slots without extra separators" do
-      expect(described_class.source).to eq("body { color: red; }\ntable { color: blue; }")
-    end
+  it "separates the token skin from the remaining composition without changing recipe bytes" do
+    expect(described_class::SKIN_PARTS).to eq(%w[foundation/tokens])
+    expect(described_class::SKIN_PARTS + described_class::COMPOSITION_PARTS).to eq(expected_parts)
+    expect(described_class.source).to eq(
+      [described_class::SKIN_MANIFEST.source, described_class::COMPOSITION_MANIFEST.source].join("\n")
+    )
   end
 end

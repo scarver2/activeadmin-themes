@@ -7,11 +7,54 @@ require "active_admin/themes"
 RSpec.describe ActiveAdmin::Themes::Theme do
   subject(:theme) { ActiveAdmin::Themes::V3.theme }
 
+  let(:custom_skin) do
+    ActiveAdmin::Themes::Skin.new(
+      key: "custom", name: :Custom, description: :Palette,
+      manifest: instance_double(ActiveAdmin::Themes::StylesheetManifest, source: "tokens {}")
+    )
+  end
+  let(:custom_composition) do
+    ActiveAdmin::Themes::Composition.new(
+      key: "workspace", name: :Workspace, description: :Layout,
+      manifest: instance_double(ActiveAdmin::Themes::StylesheetManifest, source: "layout {}"),
+      slots: { "main" => :workspace }
+    )
+  end
+  let(:custom_theme) do
+    described_class.new(
+      key: "custom", name: :Custom, description: :Theme, active_admin_requirement: ">= 4",
+      recipe_version: 1, skin: custom_skin, composition: custom_composition
+    )
+  end
+
   it "normalizes immutable theme metadata" do
-    expect(theme.key).to eq(:v3)
-    expect(theme.name).to eq("ActiveAdmin V3")
-    expect(theme.recipe_version).to eq("1")
+    expect([theme.key, theme.name, theme.recipe_version]).to eq([:v3, "ActiveAdmin V3", "2"])
+    expect([theme.skin, theme.composition]).to eq([ActiveAdmin::Themes::V3::SKIN, ActiveAdmin::Themes::V3::COMPOSITION])
     expect(theme).to be_frozen
+  end
+
+  it "composes its skin before its composition" do
+    expect(theme.source).to eq(ActiveAdmin::Themes::Recipes::V3.source)
+  end
+
+  it "supports independently reusable skins and compositions" do
+    expect(custom_theme.source).to eq("tokens {}\nlayout {}")
+    expect(custom_composition.class_for("main")).to eq("workspace")
+    expect([custom_skin.key, custom_skin.name, custom_skin.description]).to eq([:custom, "Custom", "Palette"])
+    expect([custom_composition.key, custom_composition.name]).to eq([:workspace, "Workspace"])
+    expect(custom_theme.recipe_version).to eq("1")
+  end
+
+  it "rejects an unknown composition slot" do
+    expect { custom_composition.class_for(:missing) }.to raise_error(KeyError)
+  end
+
+  it "does not add a separator when either theme layer is empty" do
+    empty = instance_double(ActiveAdmin::Themes::Skin, source: "")
+    populated = instance_double(ActiveAdmin::Themes::Composition, source: "layout {}")
+    custom = theme.with(skin: empty, composition: populated)
+
+    expect(custom.source).to eq("layout {}")
   end
 
   it "reports supported ActiveAdmin versions" do
@@ -19,5 +62,22 @@ RSpec.describe ActiveAdmin::Themes::Theme do
     expect(theme).to be_supports("4.1.0")
     expect(theme).not_to be_supports("3.5.0")
     expect(theme).not_to be_supports("5.0.0")
+  end
+
+  it "registers Texas Bluebonnet as a full theme" do
+    bluebonnet = ActiveAdmin::Themes::TexasBluebonnet.theme
+
+    expect(bluebonnet.key).to eq(:texas_bluebonnet)
+    expect(bluebonnet.skin.key).to eq(:texas_bluebonnet)
+    expect(bluebonnet.composition.class_for(:workspace)).to eq("bluebonnet-workspace")
+    expect(bluebonnet.source).to eq(ActiveAdmin::Themes::Recipes::TexasBluebonnet.source)
+  end
+
+  it "exposes Bluebonnet's continuous toolbar and primary action roles" do
+    composition = ActiveAdmin::Themes::TexasBluebonnet::COMPOSITION
+
+    expect(composition.class_for(:toolbar_surface)).to eq("bluebonnet-toolbar-surface")
+    expect(composition.class_for(:primary_action)).to eq("bluebonnet-primary-action")
+    expect(composition.class_for(:data_heading)).to eq("bluebonnet-data-heading")
   end
 end
