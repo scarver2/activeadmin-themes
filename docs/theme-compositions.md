@@ -129,6 +129,12 @@ The host opts in with `data-activeadmin-theme="workbench-2"` and classes from `W
 
 Its surface is fixed rather than color-scheme adaptive. The four-pen pseudo-3D model uses semantic surface, text, shine, shadow, fill, and fill-text tokens; `forced-colors` is the sole token substitution. Full historical provenance and the source-to-adaptation ledger are recorded in [Workbench 2.x theme provenance](workbench-2.md).
 
+## MUI
+
+MUI preserves the shared 24-role Heritage contract while replacing the desktop-window grammar with a configurable application-toolkit grammar. Its independent `mui-*` namespace uses semantic tokens for frame depth, active color, field surfaces, radii, and object gaps. The bundled silver/teal values are an original baseline, not a claim that MUI had one canonical palette; hosts can override the tokens without changing the slot map or composition selectors.
+
+The host opts in with `data-activeadmin-theme="mui"` and classes from `Mui::COMPOSITION.slots`. The recipe remains asset-free and does not recreate MUI runtime classes, preferences, requesters, or behavior. Its provenance, lineage boundary, accessibility adaptations, and dedication are recorded in [MUI theme provenance](mui.md).
+
 ## Showcase Migration Follow-up
 
 Showcase should replace its page-scoped monolithic CSS with the installed gem recipe, put the theme data attribute on `body`, apply the documented slot classes to its existing markup, and delete the promoted CSS. Its Account Explorer endpoint, React island, fallback, table semantics, routes, and tests remain Showcase-owned. Fresh exact-head desktop/narrow light/dark screenshots are required after that migration; the historical PR #73 images establish design intent but do not prove the new installed path.

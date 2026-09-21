@@ -1,0 +1,47 @@
+/* lib/active_admin/themes/recipes/mui/components/navigation.css */
+body[data-activeadmin-theme="mui"] .mui-screen-header {
+  align-items: center;
+  background: var(--mui-surface);
+  border-bottom: 1px solid var(--mui-deep-shadow);
+  box-shadow: inset 0 1px var(--mui-shine), inset 0 -1px var(--mui-shadow);
+  color: var(--mui-text);
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  gap: 0.35rem 1.25rem;
+  justify-content: space-between;
+  min-height: 34px;
+  padding: 0.35rem 0.65rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-screen-header > span:last-child {
+  color: var(--mui-muted);
+  font-size: 0.75rem;
+  margin-left: auto;
+}
+
+body[data-activeadmin-theme="mui"] .mui-navigation {
+  background: var(--mui-surface-soft);
+  border-bottom: 1px solid var(--mui-shadow);
+  box-shadow: inset 0 1px var(--mui-shine);
+  display: flex;
+  flex-wrap: wrap;
+  padding-inline: 0.3rem;
+}
+
+body[data-activeadmin-theme="mui"] .mui-navigation a {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--mui-inner-radius) var(--mui-inner-radius) 0 0;
+  display: inline-flex;
+  min-height: 44px;
+  padding: 0.4rem 0.65rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="mui"] .mui-navigation a:hover {
+  background: var(--mui-surface);
+  border-color: var(--mui-shine) var(--mui-shadow) transparent;
+  color: var(--mui-text);
+  text-decoration: none;
+}

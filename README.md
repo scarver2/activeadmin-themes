@@ -27,11 +27,14 @@ The catalog also includes `:texas_bluebonnet`, the first full theme built on the
 
 `:workbench_3` translates the late-Commodore Workbench 3.x visual grammar without mixing in MUI, MagicWB, NewIcons, or Amiga Forever 3.X additions. Its original CSS dither, white screen-information bar, and active-blue window hierarchy preserve a fixed historical presentation without redistributing historical assets.
 
+`:mui` translates MUI's configurable, font-sensitive application-object grammar into the shared Heritage contract. Its original silver/teal baseline, framed groups, register-like navigation, and recessed fields are asset-free and intentionally distinct from Workbench 3.x.
+
 ```bash
 bundle exec rake 'activeadmin_themes:install[texas_bluebonnet,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[workbench_13,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[workbench_2,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[workbench_3,app/assets/stylesheets/active_admin.css]'
+bundle exec rake 'activeadmin_themes:install[mui,app/assets/stylesheets/active_admin.css]'
 ```
 
 See [Theme composition architecture](docs/theme-compositions.md) for the host markup contract and migration boundary.
