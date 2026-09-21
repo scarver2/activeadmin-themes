@@ -1,0 +1,95 @@
+/* lib/active_admin/themes/recipes/aros_zune/components/windows.css */
+body[data-activeadmin-theme="aros_zune"] .aros-zune-window {
+  background: linear-gradient(to bottom, var(--aros-zune-surface), var(--aros-zune-surface-soft));
+  border-color: var(--aros-zune-shine) var(--aros-zune-shadow) var(--aros-zune-shadow)
+    var(--aros-zune-shine);
+  border-style: solid;
+  border-radius: var(--aros-zune-frame-radius);
+  border-width: 2px;
+  box-shadow: 0 3px 7px color-mix(in srgb, var(--aros-zune-deep-shadow) 44%, transparent);
+  min-width: 0;
+  overflow: clip;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-primary-window {
+  min-width: 0;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-side-window {
+  margin-top: 1.25rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-wide-window {
+  grid-column: 1 / -1;
+  margin-left: 1.25rem;
+  max-width: 800px;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-window-header {
+  align-items: center;
+  background: var(--aros-zune-surface);
+  border-bottom: 2px solid var(--aros-zune-shadow);
+  color: var(--aros-zune-text);
+  display: flex;
+  font: inherit;
+  font-weight: 700;
+  gap: 0.5rem;
+  min-height: 32px;
+  padding: 0.3rem 0.55rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-window-header::after {
+  background: repeating-linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--aros-zune-deep-shadow) 34%, transparent) 0 1px,
+    transparent 1px 3px
+  );
+  content: "";
+  flex: 1;
+  height: 9px;
+}
+
+body[data-activeadmin-theme="aros_zune"]
+  :is(.aros-zune-primary-window, .aros-zune-wide-window)
+  > .aros-zune-window-header {
+  background: linear-gradient(to right, var(--aros-zune-active), var(--aros-zune-active-soft));
+  color: var(--aros-zune-active-text);
+}
+
+body[data-activeadmin-theme="aros_zune"]
+  :is(.aros-zune-primary-window, .aros-zune-wide-window)
+  > .aros-zune-window-header::after {
+  background: repeating-linear-gradient(to bottom, rgb(255 255 255 / 55%) 0 1px, transparent 1px 3px);
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-window-content {
+  padding: 0.85rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-side-window > .aros-zune-window-content {
+  display: grid;
+  gap: 1rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-wide-window > .aros-zune-window-content {
+  display: grid;
+  gap: 0.75rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-block: 0.6rem;
+  text-decoration: underline;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-window-actions {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-window-actions a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+}
