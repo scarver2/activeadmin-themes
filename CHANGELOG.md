@@ -11,6 +11,7 @@ This project has not published its first release.
 - Register Workbench 1.3 as a historically grounded fixed-presentation heritage theme.
 - Register Workbench 2.x as an independent pseudo-3D fixed-presentation heritage theme.
 - Register Workbench 3.x as an independent late-Commodore fixed-presentation heritage theme.
+- Register MUI, AmigaOS 4, and AROS/Zune as independent configurable-toolkit heritage themes.
 - Preserve one host-owned installed stylesheet and zero runtime styling side effects.
 
 —

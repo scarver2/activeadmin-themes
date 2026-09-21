@@ -1,0 +1,51 @@
+/* lib/active_admin/themes/recipes/aros_zune/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace *,
+  body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace *::before,
+  body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body[data-activeadmin-theme="aros_zune"] {
+    --aros-zune-desktop: Canvas;
+    --aros-zune-surface: Canvas;
+    --aros-zune-surface-soft: Canvas;
+    --aros-zune-field: Field;
+    --aros-zune-text: CanvasText;
+    --aros-zune-muted: CanvasText;
+    --aros-zune-shine: CanvasText;
+    --aros-zune-shadow: CanvasText;
+    --aros-zune-deep-shadow: CanvasText;
+    --aros-zune-active: Highlight;
+    --aros-zune-active-soft: Highlight;
+    --aros-zune-active-text: HighlightText;
+    --aros-zune-accent: LinkText;
+    --aros-zune-selection: Highlight;
+  }
+
+  body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace {
+    background-image: none;
+  }
+
+  body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace
+    :is(a, button, input, select, summary, [tabindex]):focus-visible {
+    box-shadow: none;
+    outline: 3px solid Highlight;
+  }
+
+  body[data-activeadmin-theme="aros_zune"] .aros-zune-window-header::after {
+    background: none;
+    border-top: 2px solid CanvasText;
+  }
+
+  body[data-activeadmin-theme="aros_zune"]
+    .aros-zune-workspace
+    :is(.aros-zune-form select, .aros-zune-primary-action, .aros-zune-secondary-action) {
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}

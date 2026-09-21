@@ -1,0 +1,67 @@
+/* lib/active_admin/themes/recipes/aros_zune/components/data.css */
+body[data-activeadmin-theme="aros_zune"] .aros-zune-status {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-data-region {
+  background: var(--aros-zune-field);
+  border-color: var(--aros-zune-shadow) var(--aros-zune-shine) var(--aros-zune-shine)
+    var(--aros-zune-shadow);
+  border-style: solid;
+  border-radius: var(--aros-zune-inner-radius);
+  border-width: 2px;
+  box-shadow: inset 1px 1px 1px rgb(32 41 51 / 18%);
+  overflow-x: auto;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-data-table {
+  border-collapse: collapse;
+  color: inherit;
+  font: inherit;
+  width: 100%;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-data-table caption {
+  font-size: 0.75rem;
+  padding: 0.45rem;
+  text-align: left;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-data-table :is(th, td) {
+  border-bottom: 1px solid color-mix(in srgb, var(--aros-zune-shadow) 50%, var(--aros-zune-field));
+  font-weight: 400;
+  padding: 0.55rem 0.45rem;
+  text-align: left;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-data-table thead {
+  background: linear-gradient(to bottom, var(--aros-zune-surface), var(--aros-zune-surface-soft));
+  border-bottom: 2px solid var(--aros-zune-shadow);
+  color: var(--aros-zune-text);
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-data-table th a {
+  align-items: center;
+  display: inline-flex;
+  font-weight: 700;
+  min-height: 32px;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-data-table tbody tr:focus-within,
+body[data-activeadmin-theme="aros_zune"] .aros-zune-data-table tbody tr:hover {
+  background: var(--aros-zune-selection);
+  color: var(--aros-zune-text);
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-status-tag {
+  background: var(--aros-zune-selection);
+  border-color: var(--aros-zune-shine) var(--aros-zune-shadow) var(--aros-zune-shadow)
+    var(--aros-zune-shine);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: var(--aros-zune-inner-radius);
+  font-size: 0.8rem;
+  padding: 0.1rem 0.35rem;
+  white-space: nowrap;
+}

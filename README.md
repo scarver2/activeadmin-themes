@@ -31,6 +31,8 @@ The catalog also includes `:texas_bluebonnet`, the first full theme built on the
 
 `:amigaos_4` translates the AmigaOS 4.1 Final Edition Workbench and ReAction visual language into an original cool-blue, pearl, and graphite workspace. It preserves configurable, adaptive interface principles without copying system icons, fonts, backdrops, wordmarks, or title-bar artwork.
 
+`:aros_zune` translates AROS's open-source Zune object grammar into an original warm cream, blue, and amber workspace. It preserves semantic, font-sensitive, user-configurable layout principles without copying AROS source, preferences, icons, fonts, screenshots, marks, or runtime behavior.
+
 ```bash
 bundle exec rake 'activeadmin_themes:install[texas_bluebonnet,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[workbench_13,app/assets/stylesheets/active_admin.css]'
@@ -38,6 +40,7 @@ bundle exec rake 'activeadmin_themes:install[workbench_2,app/assets/stylesheets/
 bundle exec rake 'activeadmin_themes:install[workbench_3,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[mui,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[amigaos_4,app/assets/stylesheets/active_admin.css]'
+bundle exec rake 'activeadmin_themes:install[aros_zune,app/assets/stylesheets/active_admin.css]'
 ```
 
 See [Theme composition architecture](docs/theme-compositions.md) for the host markup contract and migration boundary.
