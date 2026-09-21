@@ -1,0 +1,22 @@
+/* lib/active_admin/themes/recipes/aros_zune/foundation/tokens.css */
+body[data-activeadmin-theme="aros_zune"] {
+  --aros-zune-desktop: #667f94;
+  --aros-zune-desktop-deep: #465f74;
+  --aros-zune-surface: #ece9bc;
+  --aros-zune-surface-soft: #dad7b7;
+  --aros-zune-field: #f6f3dc;
+  --aros-zune-text: #202933;
+  --aros-zune-muted: #4f5b66;
+  --aros-zune-shine: #ffffee;
+  --aros-zune-shadow: #9b987b;
+  --aros-zune-deep-shadow: #4b5560;
+  --aros-zune-active: #4b72a5;
+  --aros-zune-active-soft: #90b7e5;
+  --aros-zune-active-text: #ffffff;
+  --aros-zune-accent: #d19c24;
+  --aros-zune-selection: #f0cf63;
+  --aros-zune-frame-radius: 0.3rem;
+  --aros-zune-inner-radius: 0.15rem;
+  --aros-zune-object-gap: 0.7rem;
+  color-scheme: light;
+}

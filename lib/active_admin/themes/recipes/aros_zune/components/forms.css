@@ -1,0 +1,52 @@
+/* lib/active_admin/themes/recipes/aros_zune/components/forms.css */
+body[data-activeadmin-theme="aros_zune"] .aros-zune-form {
+  display: grid;
+  gap: 0.7rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-form select {
+  width: 100%;
+}
+
+body[data-activeadmin-theme="aros_zune"]
+  :where(.aros-zune-form select, .aros-zune-primary-action, .aros-zune-secondary-action) {
+  background: var(--aros-zune-field);
+  border-color: var(--aros-zune-shine) var(--aros-zune-shadow) var(--aros-zune-shadow)
+    var(--aros-zune-shine);
+  border-radius: var(--aros-zune-inner-radius);
+  border-style: solid;
+  border-width: 2px;
+  color: var(--aros-zune-text);
+  font: inherit;
+  min-height: 44px;
+  padding: 0.35rem 0.6rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace .aros-zune-primary-action {
+  background: linear-gradient(to bottom, var(--aros-zune-active-soft), var(--aros-zune-active));
+  color: var(--aros-zune-active-text);
+  cursor: pointer;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace .aros-zune-secondary-action {
+  align-items: center;
+  background: linear-gradient(to bottom, var(--aros-zune-field), var(--aros-zune-surface));
+  color: var(--aros-zune-text);
+  display: inline-flex;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace
+  :is(.aros-zune-primary-action, .aros-zune-secondary-action):active {
+  border-color: var(--aros-zune-shadow) var(--aros-zune-shine) var(--aros-zune-shine)
+    var(--aros-zune-shadow);
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-help {
+  font-size: 0.75rem;
+}
