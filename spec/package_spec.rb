@@ -36,7 +36,12 @@ RSpec.describe "Built recipe package" do
       components/navigation components/launchers components/windows components/data components/forms
       surfaces/workspace hardening/responsive hardening/preferences
     ].map { |part| "lib/active_admin/themes/recipes/workbench_3/#{part}.css" }
-    v3 + bluebonnet + workbench + workbench2 + workbench3
+    mui = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/mui/#{part}.css" }
+    v3 + bluebonnet + workbench + workbench2 + workbench3 + mui
   end
 
   # rubocop:disable-next RSpec/ExampleLength
@@ -46,7 +51,7 @@ RSpec.describe "Built recipe package" do
       archive = Gem::Package.build(specification, false, false, File.join(directory, "theme.gem"))
       package = Gem::Package.new(archive)
       concern_files = package.contents.grep(
-        %r{\Alib/active_admin/themes/recipes/(?:v3|texas_bluebonnet|workbench_13|workbench_2|workbench_3)/.*\.css\z}
+        %r{\Alib/active_admin/themes/recipes/(?:v3|texas_bluebonnet|workbench_13|workbench_2|workbench_3|mui)/.*\.css\z}
       )
       expect(concern_files).to match_array(packaged_concerns)
       package.extract_files(File.join(directory, "unpacked"))
