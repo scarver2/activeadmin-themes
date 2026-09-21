@@ -51,6 +51,20 @@ RSpec.describe ActiveAdmin::Themes::Recipe do
     expect(recipe.instructions).to include('@import "./active_admin_v3.css";', "admin.css", "existing CSS build")
   end
 
+  # The full boundary assertion intentionally keeps install result, bytes and instructions together.
+  it "installs Texas Bluebonnet through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    bluebonnet = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: :texas_bluebonnet
+    )
+
+    result = bluebonnet.install
+    installed = File.binread(File.join(root, bluebonnet.destination))
+
+    expect([result, bluebonnet.destination]).to eq([:created, "active_admin_texas_bluebonnet.css"])
+    expect(installed).to eq(ActiveAdmin::Themes::TexasBluebonnet.theme.source)
+    expect(bluebonnet.instructions).to include('@import "./active_admin_texas_bluebonnet.css";')
+  end
+
   it "requires an existing entrypoint" do
     File.unlink(File.join(root, "admin.css"))
     expect { recipe }.to raise_error(ArgumentError, "styling entrypoint does not exist")

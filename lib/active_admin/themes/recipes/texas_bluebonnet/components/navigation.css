@@ -1,0 +1,50 @@
+/* lib/active_admin/themes/recipes/texas_bluebonnet/components/navigation.css */
+body[data-activeadmin-theme="texas-bluebonnet"] > div:has(> #main-menu) {
+  margin-inline-start: 0;
+  padding-top: 64px;
+}
+
+body[data-activeadmin-theme="texas-bluebonnet"] > div:has([data-test-site-title]) {
+  background: var(--aat-chrome);
+  border: 0;
+  color: var(--aat-on-chrome);
+  padding-inline: 28px;
+}
+
+body[data-activeadmin-theme="texas-bluebonnet"] [data-test-site-title] {
+  font-size: 14px;
+  letter-spacing: .02em;
+}
+
+body[data-activeadmin-theme="texas-bluebonnet"] [data-drawer-show="main-menu"] {
+  display: inline-flex;
+  height: 44px;
+  margin-inline-end: 12px;
+  padding: 10px;
+  width: 44px;
+}
+
+body[data-activeadmin-theme="texas-bluebonnet"] [data-drawer-show="main-menu"] svg {
+  color: var(--aat-on-chrome);
+}
+
+body[data-activeadmin-theme="texas-bluebonnet"] #main-menu {
+  background: var(--aat-surface);
+  top: 0;
+  width: 300px;
+}
+
+body[data-activeadmin-theme="texas-bluebonnet"] #main-menu.-translate-x-full { translate: -100% 0; }
+body[data-activeadmin-theme="texas-bluebonnet"] #main-menu:not(.-translate-x-full) { translate: 0; }
+
+.bluebonnet-context {
+  align-items: center;
+  border-bottom: 1px solid var(--aat-border);
+  color: var(--aat-muted);
+  display: flex;
+  font-size: 12px;
+  gap: 12px;
+  min-height: 54px;
+}
+
+.bluebonnet-context .bluebonnet-exit { margin-inline-start: auto; }
