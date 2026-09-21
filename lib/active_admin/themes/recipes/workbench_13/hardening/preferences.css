@@ -30,6 +30,7 @@
   }
 
   body[data-activeadmin-theme="workbench-13"]
+    .workbench-13-workspace
     :is(.workbench-13-form select, .workbench-13-primary-action, .workbench-13-secondary-action) {
     background: ButtonFace;
     box-shadow: none;
