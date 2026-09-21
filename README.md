@@ -21,8 +21,11 @@ theme.composition
 
 The catalog also includes `:texas_bluebonnet`, the first full theme built on the reusable skin/composition contract. Its presentation direction comes from the approved [Showcase PR #73](https://github.com/scarver2/activeadmin-react-showcase/pull/73); the gem does not copy Showcase routes, data, behavior, or React components.
 
+`:workbench_13` translates the approved Workbench 1.3 Heritage Laboratory study into a fixed historical light presentation. Its CSS drawer art belongs to the composition rather than the ordinary functional icon registry. The recipe does not ship an emulator, historical assets, application behavior, or an invented dark variant.
+
 ```bash
 bundle exec rake 'activeadmin_themes:install[texas_bluebonnet,app/assets/stylesheets/active_admin.css]'
+bundle exec rake 'activeadmin_themes:install[workbench_13,app/assets/stylesheets/active_admin.css]'
 ```
 
 See [Theme composition architecture](docs/theme-compositions.md) for the host markup contract and migration boundary.

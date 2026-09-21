@@ -1,0 +1,44 @@
+/* lib/active_admin/themes/recipes/workbench_13/components/launchers.css */
+body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-group {
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  margin-bottom: 2rem;
+}
+
+body[data-activeadmin-theme="workbench-13"] a.workbench-13-launcher {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  min-width: 100px;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="workbench-13"] a.workbench-13-launcher:hover {
+  background: var(--workbench-13-orange);
+  color: var(--workbench-13-ink);
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-art {
+  background: var(--workbench-13-white);
+  border: 3px solid var(--workbench-13-ink);
+  box-shadow: 5px -5px 0 -1px var(--workbench-13-white), 7px -7px 0 0 var(--workbench-13-ink);
+  display: block;
+  height: 29px;
+  outline: 2px solid var(--workbench-13-white);
+  position: relative;
+  width: 68px;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-art::after {
+  border: 2px solid var(--workbench-13-ink);
+  border-top: 0;
+  content: "";
+  height: 8px;
+  left: 18px;
+  position: absolute;
+  top: 6px;
+  width: 24px;
+}

@@ -1,0 +1,38 @@
+/* lib/active_admin/themes/recipes/workbench_13/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace *,
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace *::before,
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body[data-activeadmin-theme="workbench-13"] {
+    --workbench-13-blue: Canvas;
+    --workbench-13-white: CanvasText;
+    --workbench-13-ink: CanvasText;
+    --workbench-13-orange: Highlight;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace
+    :is(a, button, input, select, summary, [tabindex]):focus-visible {
+    box-shadow: none;
+    outline: 3px solid Highlight;
+  }
+
+  body[data-activeadmin-theme="workbench-13"]
+    :is(.workbench-13-screen-header, .workbench-13-window-header, .workbench-13-data-table thead) {
+    background: Canvas;
+    color: CanvasText;
+  }
+
+  body[data-activeadmin-theme="workbench-13"]
+    :is(.workbench-13-form select, .workbench-13-primary-action, .workbench-13-secondary-action) {
+    background: ButtonFace;
+    box-shadow: none;
+    color: ButtonText;
+  }
+}
