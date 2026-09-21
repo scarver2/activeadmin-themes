@@ -11,6 +11,7 @@ bundle exec rake activeadmin_themes:list
 bundle exec rake 'activeadmin_themes:install[v3,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:status[v3,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[texas_bluebonnet,app/assets/stylesheets/active_admin.css]'
+bundle exec rake 'activeadmin_themes:install[workbench_13,app/assets/stylesheets/active_admin.css]'
 ```
 
 Supply the actual existing Tailwind input (not generated build output). Installation creates `active_admin_<theme>.css` beside it and prints an explicit import to add to that input. The host owns this one-line integration and its existing compiler. Rebuild before checking the browser. Installation never edits the original entrypoint or overwrites a recipe file: identical copies are skipped, customizations raise a conflict. Compare a future canonical recipe manually before upgrading.

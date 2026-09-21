@@ -1,0 +1,42 @@
+/* lib/active_admin/themes/recipes/workbench_13/hardening/responsive.css */
+@media (max-width: 1100px) {
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-side-window {
+    margin-top: 0;
+    max-width: 440px;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-wide-window {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace {
+    font-size: 0.875rem;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace
+    > :not(.workbench-13-screen-header, .workbench-13-navigation) {
+    padding: 0.75rem;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-screen-header {
+    gap: 0.25rem;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-screen-header > * {
+    width: 100%;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher-group {
+    gap: 0.5rem;
+  }
+
+  body[data-activeadmin-theme="workbench-13"] .workbench-13-launcher {
+    min-width: 80px;
+  }
+}

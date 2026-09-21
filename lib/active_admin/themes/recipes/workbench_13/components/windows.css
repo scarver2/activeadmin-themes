@@ -1,0 +1,55 @@
+/* lib/active_admin/themes/recipes/workbench_13/components/windows.css */
+body[data-activeadmin-theme="workbench-13"] .workbench-13-window {
+  border: 3px solid var(--workbench-13-white);
+  box-shadow: 5px 5px 0 var(--workbench-13-ink);
+  min-width: 0;
+  outline: 2px solid var(--workbench-13-ink);
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-primary-window {
+  min-width: 0;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-side-window {
+  margin-top: 2rem;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-wide-window {
+  grid-column: 1 / -1;
+  margin-left: 2rem;
+  max-width: 780px;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-window-header {
+  align-items: center;
+  background: var(--workbench-13-white);
+  border-bottom: 3px double var(--workbench-13-blue);
+  color: var(--workbench-13-blue);
+  display: flex;
+  font: inherit;
+  font-weight: 700;
+  gap: 0.5rem;
+  padding: 0.2rem 0.4rem;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-window-header::after {
+  border-block: 3px double var(--workbench-13-blue);
+  content: "";
+  flex: 1;
+  height: 10px;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-window-content {
+  padding: 0.75rem;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-window-actions {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-window-actions a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+}

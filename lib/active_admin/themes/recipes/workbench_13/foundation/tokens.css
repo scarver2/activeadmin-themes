@@ -1,0 +1,8 @@
+/* lib/active_admin/themes/recipes/workbench_13/foundation/tokens.css */
+body[data-activeadmin-theme="workbench-13"] {
+  --workbench-13-blue: #244b9b;
+  --workbench-13-white: #fffdf4;
+  --workbench-13-ink: #10234e;
+  --workbench-13-orange: #ffae38;
+  color-scheme: light;
+}
