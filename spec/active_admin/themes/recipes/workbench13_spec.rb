@@ -63,12 +63,18 @@ RSpec.describe ActiveAdmin::Themes::Recipes::Workbench13 do
     expect(ActiveAdmin::Themes::Workbench13::COMPOSITION.slots.keys).to match_array(expected_slots)
   end
 
-  it "keeps the primary action above the shared control background in the cascade" do
+  # Both roles and their shared base intentionally remain one cascade-level regression.
+  it "keeps both action roles above generic workspace links in the cascade" do # rubocop:disable RSpec/ExampleLength
     source = described_class.source
     shared = ":where(.workbench-13-form select, .workbench-13-primary-action, .workbench-13-secondary-action)"
-    primary = 'body[data-activeadmin-theme="workbench-13"] .workbench-13-primary-action {'
+    primary = ".workbench-13-workspace .workbench-13-primary-action {"
+    secondary = ".workbench-13-workspace .workbench-13-secondary-action {"
 
-    expect(source).to include("--workbench-13-orange: #ffae38", "#{primary}\n  background: var(--workbench-13-orange)")
+    expect(source).to include(
+      "--workbench-13-orange: #ffae38",
+      "#{primary}\n  background: var(--workbench-13-orange);\n  color: var(--workbench-13-ink)",
+      "#{secondary}\n  align-items: center;\n  background: var(--workbench-13-white);\n  color: var(--workbench-13-ink)"
+    )
     expect(source.index(shared)).to be < source.index(primary)
   end
 

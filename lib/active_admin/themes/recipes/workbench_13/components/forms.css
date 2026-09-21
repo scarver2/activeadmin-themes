@@ -20,13 +20,16 @@ body[data-activeadmin-theme="workbench-13"]
   padding: 0.4rem 0.6rem;
 }
 
-body[data-activeadmin-theme="workbench-13"] .workbench-13-primary-action {
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace .workbench-13-primary-action {
   background: var(--workbench-13-orange);
+  color: var(--workbench-13-ink);
   cursor: pointer;
 }
 
-body[data-activeadmin-theme="workbench-13"] .workbench-13-secondary-action {
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace .workbench-13-secondary-action {
   align-items: center;
+  background: var(--workbench-13-white);
+  color: var(--workbench-13-ink);
   display: inline-flex;
 }
 
