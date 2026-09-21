@@ -1,0 +1,25 @@
+/* lib/active_admin/themes/recipes/workbench_13/surfaces/workspace.css */
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace {
+  min-height: 650px;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace
+  > :not(.workbench-13-screen-header, .workbench-13-navigation) {
+  padding: 1.5rem;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace-grid {
+  align-items: start;
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: minmax(0, 1fr) 280px;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-footer {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}

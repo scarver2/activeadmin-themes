@@ -66,6 +66,61 @@ Classes describe presentation roles rather than application components. The host
 
 AA4 remains authoritative for behavior. The recipe uses current AA4 presentation hooks for its top shell, drawer, page header, and content container. Those selectors are an explicit compatibility surface to verify when ActiveAdmin changes; they are not a replacement for native behavior.
 
+## Workbench 1.3
+
+Workbench 1.3 is the first Heritage Theme promoted from a bounded Showcase study. It uses the same public `Skin` + `Composition` + `Theme` contract while deliberately stressing a different design language:
+
+```text
+recipes/workbench_13/
+  foundation/
+    tokens.css
+    base.css
+  components/
+    navigation.css
+    launchers.css
+    windows.css
+    data.css
+    forms.css
+  surfaces/
+    workspace.css
+  hardening/
+    responsive.css
+    preferences.css
+```
+
+The host opts in with `data-activeadmin-theme="workbench-13"` and applies classes from `Workbench13::COMPOSITION.slots`. Its presentation is intentionally fixed: a host dark preference does not create a fictitious dark Workbench. Forced-colors remains user-controlled and is the only token substitution.
+
+The 24 stable slots are:
+
+| Slot | CSS class |
+| --- | --- |
+| `workspace` | `workbench-13-workspace` |
+| `screen_header` | `workbench-13-screen-header` |
+| `navigation` | `workbench-13-navigation` |
+| `launcher_group` | `workbench-13-launcher-group` |
+| `launcher` | `workbench-13-launcher` |
+| `launcher_art` | `workbench-13-launcher-art` |
+| `workspace_grid` | `workbench-13-workspace-grid` |
+| `window` | `workbench-13-window` |
+| `primary_window` | `workbench-13-primary-window` |
+| `side_window` | `workbench-13-side-window` |
+| `wide_window` | `workbench-13-wide-window` |
+| `window_header` | `workbench-13-window-header` |
+| `window_content` | `workbench-13-window-content` |
+| `status` | `workbench-13-status` |
+| `data_region` | `workbench-13-data-region` |
+| `data_table` | `workbench-13-data-table` |
+| `status_tag` | `workbench-13-status-tag` |
+| `window_actions` | `workbench-13-window-actions` |
+| `form` | `workbench-13-form` |
+| `actions` | `workbench-13-actions` |
+| `primary_action` | `workbench-13-primary-action` |
+| `secondary_action` | `workbench-13-secondary-action` |
+| `help` | `workbench-13-help` |
+| `footer` | `workbench-13-footer` |
+
+The launcher illustration is original CSS geometry owned by this composition. It is not an ordinary functional icon and does not expand or depend on the semantic icon registry. The host continues to own semantic HTML, labels, routes, authorization, data, interactions, and the decision to use Rails or React.
+
 ## Showcase Migration Follow-up
 
 Showcase should replace its page-scoped monolithic CSS with the installed gem recipe, put the theme data attribute on `body`, apply the documented slot classes to its existing markup, and delete the promoted CSS. Its Account Explorer endpoint, React island, fallback, table semantics, routes, and tests remain Showcase-owned. Fresh exact-head desktop/narrow light/dark screenshots are required after that migration; the historical PR #73 images establish design intent but do not prove the new installed path.

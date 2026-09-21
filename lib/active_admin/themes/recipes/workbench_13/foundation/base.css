@@ -1,0 +1,31 @@
+/* lib/active_admin/themes/recipes/workbench_13/foundation/base.css */
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace {
+  background: var(--workbench-13-blue);
+  border: 3px solid var(--workbench-13-ink);
+  color: var(--workbench-13-white);
+  font: 1rem/1.45 ui-monospace, "Cascadia Mono", "Courier New", monospace;
+  isolation: isolate;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace *,
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace *::before,
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace *::after {
+  box-sizing: border-box;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body[data-activeadmin-theme="workbench-13"] .workbench-13-workspace
+  :is(a, button, input, select, summary, [tabindex]):focus-visible {
+  box-shadow: 0 0 0 5px var(--workbench-13-ink);
+  outline: 3px solid var(--workbench-13-orange);
+  outline-offset: 3px;
+}
