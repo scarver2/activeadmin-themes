@@ -1,0 +1,10 @@
+/* lib/active_admin/themes/recipes/workbench_2/foundation/tokens.css */
+body[data-activeadmin-theme="workbench-2"] {
+  --workbench-2-surface: #9b9b9b;
+  --workbench-2-text: #111111;
+  --workbench-2-shine: #f5f5f5;
+  --workbench-2-shadow: #3f3f3f;
+  --workbench-2-fill: #315f9b;
+  --workbench-2-fill-text: #ffffff;
+  color-scheme: light;
+}
