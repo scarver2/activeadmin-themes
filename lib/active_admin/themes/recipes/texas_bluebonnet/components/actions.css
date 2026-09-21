@@ -11,7 +11,7 @@
   padding: 13px 17px;
   text-decoration: none;
 }
-.bluebonnet-primary-action {
+.bluebonnet-workspace .bluebonnet-data .bluebonnet-primary-action {
   background: var(--aat-chrome);
   border: 1px solid var(--aat-border);
   color: var(--aat-on-chrome);
