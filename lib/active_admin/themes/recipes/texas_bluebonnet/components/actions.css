@@ -1,5 +1,5 @@
 /* lib/active_admin/themes/recipes/texas_bluebonnet/components/actions.css */
-.bluebonnet-action {
+.bluebonnet-workspace .bluebonnet-action {
   align-items: center;
   background: var(--aat-chrome);
   border: 1px solid var(--aat-border);
