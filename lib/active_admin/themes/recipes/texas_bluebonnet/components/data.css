@@ -1,11 +1,12 @@
 /* lib/active_admin/themes/recipes/texas_bluebonnet/components/data.css */
 .bluebonnet-data-surface { border-radius: 0; box-shadow: none; }
+.bluebonnet-data-heading { font-size: 15px; font-weight: 600; letter-spacing: -.01em; }
 .bluebonnet-workspace .bluebonnet-data .bluebonnet-toolbar-surface {
   background: transparent;
   border: 0;
   padding: 0 0 20px;
 }
-.bluebonnet-toolbar { border: 0; background: transparent; padding: 0 0 20px; }
+.bluebonnet-toolbar { background: transparent; border: 0; gap: 12px; }
 .bluebonnet-toolbar :is(input, select, button) { border-radius: 2px; }
 .bluebonnet-data-table { border-inline: 0; }
 .bluebonnet-data-table thead { background: var(--aat-surface); }

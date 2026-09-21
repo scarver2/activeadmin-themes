@@ -78,5 +78,6 @@ RSpec.describe ActiveAdmin::Themes::Theme do
 
     expect(composition.class_for(:toolbar_surface)).to eq("bluebonnet-toolbar-surface")
     expect(composition.class_for(:primary_action)).to eq("bluebonnet-primary-action")
+    expect(composition.class_for(:data_heading)).to eq("bluebonnet-data-heading")
   end
 end

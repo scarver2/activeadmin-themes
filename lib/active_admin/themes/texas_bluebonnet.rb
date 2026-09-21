@@ -13,6 +13,7 @@ module ActiveAdmin
         action: "bluebonnet-action",
         context: "bluebonnet-context",
         current: "bluebonnet-current",
+        data_heading: "bluebonnet-data-heading",
         data_surface: "bluebonnet-data-surface",
         data_table: "bluebonnet-data-table",
         eyebrow: "bluebonnet-eyebrow",
