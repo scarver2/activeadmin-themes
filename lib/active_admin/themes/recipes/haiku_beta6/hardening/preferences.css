@@ -1,0 +1,47 @@
+/* lib/active_admin/themes/recipes/haiku_beta6/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace *,
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace *::before,
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body[data-activeadmin-theme="haiku_beta6"] {
+    --haiku-beta6-desktop: Canvas;
+    --haiku-beta6-panel: Canvas;
+    --haiku-beta6-panel-soft: Canvas;
+    --haiku-beta6-document: Canvas;
+    --haiku-beta6-control: ButtonFace;
+    --haiku-beta6-border: CanvasText;
+    --haiku-beta6-shadow: CanvasText;
+    --haiku-beta6-deep-shadow: CanvasText;
+    --haiku-beta6-shine: CanvasText;
+    --haiku-beta6-text: CanvasText;
+    --haiku-beta6-muted: CanvasText;
+    --haiku-beta6-tab: Highlight;
+    --haiku-beta6-tab-text: HighlightText;
+    --haiku-beta6-focus: Highlight;
+    --haiku-beta6-highlight: Highlight;
+    --haiku-beta6-selection: Highlight;
+    --haiku-beta6-selection-text: HighlightText;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace,
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace :is(a, button, select) {
+    background-image: none;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-workspace
+    :is(a, button, input, select, summary, [tabindex]):focus-visible {
+    box-shadow: none;
+    outline: 3px solid Highlight;
+  }
+
+  body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-art::after {
+    background: Highlight;
+  }
+}

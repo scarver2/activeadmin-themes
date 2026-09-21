@@ -1,0 +1,73 @@
+/* lib/active_admin/themes/recipes/haiku_beta6/components/launchers.css */
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-group {
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--haiku-beta6-gap);
+  margin-bottom: 1.25rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] a.haiku-beta6-launcher {
+  align-items: center;
+  background: rgb(255 255 255 / 90%);
+  border: 1px solid var(--haiku-beta6-border);
+  border-radius: var(--haiku-beta6-radius);
+  box-shadow: 0 2px 5px rgb(17 17 17 / 18%);
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: 52px minmax(74px, 1fr);
+  min-height: 66px;
+  min-width: 150px;
+  padding: 0.55rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] a.haiku-beta6-launcher:hover {
+  background: var(--haiku-beta6-highlight);
+  color: var(--haiku-beta6-selection-text);
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-art {
+  background: linear-gradient(to bottom, #f6dc68 0 28%, var(--haiku-beta6-tab) 28% 100%);
+  border: 1px solid #725b00;
+  border-radius: 0.15rem 0.35rem 0.2rem 0.2rem;
+  box-shadow: inset 1px 1px rgb(255 255 255 / 65%), 2px 2px 0 rgb(0 0 0 / 12%);
+  display: block;
+  height: 38px;
+  position: relative;
+  width: 46px;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-art::before {
+  background: var(--haiku-beta6-document);
+  border: 1px solid var(--haiku-beta6-shadow);
+  content: "";
+  height: 22px;
+  left: 9px;
+  position: absolute;
+  top: 8px;
+  width: 27px;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-art::after {
+  background: repeating-linear-gradient(to bottom, var(--haiku-beta6-highlight) 0 2px, transparent 2px 5px);
+  content: "";
+  height: 12px;
+  left: 14px;
+  position: absolute;
+  top: 13px;
+  width: 17px;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-group > p:last-child {
+  background: rgb(216 216 216 / 94%);
+  border: 1px solid var(--haiku-beta6-border);
+  border-radius: var(--haiku-beta6-radius);
+  margin-left: auto !important;
+  padding: 0.45rem 0.6rem;
+  text-align: right;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-launcher-group > p:last-child small {
+  font-size: 0.75rem;
+}
