@@ -1,0 +1,34 @@
+/* lib/active_admin/themes/recipes/workbench_2/foundation/base.css */
+body[data-activeadmin-theme="workbench-2"] .workbench-2-workspace {
+  background: var(--workbench-2-surface);
+  border-color: var(--workbench-2-shine) var(--workbench-2-shadow) var(--workbench-2-shadow)
+    var(--workbench-2-shine);
+  border-style: solid;
+  border-width: 2px;
+  color: var(--workbench-2-text);
+  font: 0.9375rem/1.35 ui-monospace, "Cascadia Mono", "Courier New", monospace;
+  isolation: isolate;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-workspace *,
+body[data-activeadmin-theme="workbench-2"] .workbench-2-workspace *::before,
+body[data-activeadmin-theme="workbench-2"] .workbench-2-workspace *::after {
+  box-sizing: border-box;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-workspace :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-workspace a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-workspace
+  :is(a, button, input, select, summary, [tabindex]):focus-visible {
+  box-shadow: 0 0 0 3px var(--workbench-2-shine), 0 0 0 6px var(--workbench-2-shadow);
+  outline: 3px solid var(--workbench-2-fill);
+  outline-offset: 3px;
+}

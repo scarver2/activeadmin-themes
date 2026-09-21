@@ -23,9 +23,12 @@ The catalog also includes `:texas_bluebonnet`, the first full theme built on the
 
 `:workbench_13` translates the approved Workbench 1.3 Heritage Laboratory study into a fixed historical light presentation. Its CSS drawer art belongs to the composition rather than the ordinary functional icon registry. The recipe does not ship an emulator, historical assets, application behavior, or an invented dark variant.
 
+`:workbench_2` independently translates the Workbench 2.x pseudo-3D four-pen visual grammar. It uses original CSS geometry for beveled surfaces and launchers, preserves a fixed historical presentation, and does not redistribute Amiga artwork, fonts, or software.
+
 ```bash
 bundle exec rake 'activeadmin_themes:install[texas_bluebonnet,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[workbench_13,app/assets/stylesheets/active_admin.css]'
+bundle exec rake 'activeadmin_themes:install[workbench_2,app/assets/stylesheets/active_admin.css]'
 ```
 
 See [Theme composition architecture](docs/theme-compositions.md) for the host markup contract and migration boundary.
