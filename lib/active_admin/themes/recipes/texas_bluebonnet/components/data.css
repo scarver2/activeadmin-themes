@@ -1,5 +1,10 @@
 /* lib/active_admin/themes/recipes/texas_bluebonnet/components/data.css */
 .bluebonnet-data-surface { border-radius: 0; box-shadow: none; }
+.bluebonnet-toolbar-surface {
+  background: transparent;
+  border: 0;
+  padding: 0 0 20px;
+}
 .bluebonnet-toolbar { border: 0; background: transparent; padding: 0 0 20px; }
 .bluebonnet-toolbar :is(input, select, button) { border-radius: 2px; }
 .bluebonnet-data-table { border-inline: 0; }

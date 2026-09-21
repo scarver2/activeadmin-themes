@@ -20,9 +20,11 @@ module ActiveAdmin
         heading: "bluebonnet-heading",
         main: "bluebonnet-data",
         pagination: "bluebonnet-pagination",
+        primary_action: "bluebonnet-primary-action",
         source: "bluebonnet-source",
         support: "bluebonnet-support",
         toolbar: "bluebonnet-toolbar",
+        toolbar_surface: "bluebonnet-toolbar-surface",
         workspace: "bluebonnet-workspace",
         workspace_bar: "bluebonnet-workspace-bar",
         workspace_content: "bluebonnet-content"

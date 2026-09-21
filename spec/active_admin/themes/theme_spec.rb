@@ -72,4 +72,11 @@ RSpec.describe ActiveAdmin::Themes::Theme do
     expect(bluebonnet.composition.class_for(:workspace)).to eq("bluebonnet-workspace")
     expect(bluebonnet.source).to eq(ActiveAdmin::Themes::Recipes::TexasBluebonnet.source)
   end
+
+  it "exposes Bluebonnet's continuous toolbar and primary action roles" do
+    composition = ActiveAdmin::Themes::TexasBluebonnet::COMPOSITION
+
+    expect(composition.class_for(:toolbar_surface)).to eq("bluebonnet-toolbar-surface")
+    expect(composition.class_for(:primary_action)).to eq("bluebonnet-primary-action")
+  end
 end
