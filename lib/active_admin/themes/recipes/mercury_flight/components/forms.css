@@ -1,0 +1,44 @@
+/* lib/active_admin/themes/recipes/mercury_flight/components/forms.css */
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-form select {
+  width: 100%;
+}
+
+body[data-activeadmin-theme="mercury_flight"]
+  :where(.mercury-flight-form select, .mercury-flight-primary-action, .mercury-flight-secondary-action) {
+  border: 1px solid var(--mercury-flight-border);
+  border-radius: var(--mercury-flight-radius);
+  font: inherit;
+  min-height: 44px;
+  padding: 0.4rem 0.7rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace .mercury-flight-primary-action {
+  background: var(--mercury-flight-coral);
+  border-color: var(--mercury-flight-coral-dark);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace .mercury-flight-secondary-action {
+  align-items: center;
+  background: var(--mercury-flight-paper-muted);
+  color: var(--mercury-flight-ink);
+  display: inline-flex;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-help {
+  color: var(--mercury-flight-muted);
+  font-size: 0.78rem;
+}

@@ -1,0 +1,55 @@
+/* lib/active_admin/themes/recipes/mercury_flight/components/navigation.css */
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-screen-header {
+  align-items: center;
+  background: var(--mercury-flight-paper);
+  border-bottom: 1px solid var(--mercury-flight-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  justify-content: space-between;
+  min-height: 64px;
+  padding: 0.75rem 1rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-screen-header > span:first-child {
+  color: var(--mercury-flight-coral);
+  font-family: "Arial Narrow", "Roboto Condensed", ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.35rem, 3vw, 1.9rem);
+  font-stretch: condensed;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-screen-header > span:last-child {
+  color: var(--mercury-flight-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  margin-left: auto;
+  text-transform: uppercase;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-navigation {
+  background: var(--mercury-flight-nav);
+  border-bottom: 4px solid var(--mercury-flight-coral);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-navigation a {
+  align-items: center;
+  border-right: 1px solid rgb(255 255 255 / 16%);
+  color: var(--mercury-flight-nav-text);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 750;
+  min-height: 44px;
+  padding: 0.45rem 0.85rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-navigation a:hover {
+  background: var(--mercury-flight-coral);
+  color: #ffffff;
+}
