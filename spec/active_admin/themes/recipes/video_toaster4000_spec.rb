@@ -50,6 +50,7 @@ RSpec.describe ActiveAdmin::Themes::Recipes::VideoToaster4000 do
       "--video-toaster-4000-well: #313131",
       "--video-toaster-4000-amber: #ffef75",
       "--video-toaster-4000-red: #c52828",
+      "ui-monospace, SFMono-Regular, Menlo, Consolas",
       ".video-toaster-4000-workspace-grid",
       ".video-toaster-4000-launcher-art"
     )
