@@ -1,0 +1,56 @@
+/* lib/active_admin/themes/recipes/video_toaster_4000/components/forms.css */
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-form {
+  display: grid;
+  gap: 0.65rem;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-form select {
+  width: 100%;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"]
+  :where(.video-toaster-4000-form select, .video-toaster-4000-primary-action, .video-toaster-4000-secondary-action) {
+  background: var(--video-toaster-4000-panel-raised);
+  border-color: var(--video-toaster-4000-shine) var(--video-toaster-4000-shadow) var(--video-toaster-4000-shadow)
+    var(--video-toaster-4000-shine);
+  border-radius: var(--video-toaster-4000-radius);
+  border-style: solid;
+  border-width: 1px;
+  color: var(--video-toaster-4000-control-text);
+  font: inherit;
+  min-height: 44px;
+  padding: 0.35rem 0.65rem;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace .video-toaster-4000-primary-action {
+  background: linear-gradient(to bottom, var(--video-toaster-4000-amber), var(--video-toaster-4000-amber-muted));
+  border-color: #fff9c9 #6d602d #6d602d #fff9c9;
+  color: #111111;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace .video-toaster-4000-secondary-action {
+  align-items: center;
+  background: var(--video-toaster-4000-panel-raised);
+  color: var(--video-toaster-4000-control-text);
+  display: inline-flex;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace
+  :is(.video-toaster-4000-primary-action, .video-toaster-4000-secondary-action):active {
+  background-position: 0 1px;
+  border-color: var(--video-toaster-4000-shadow) var(--video-toaster-4000-shine) var(--video-toaster-4000-shine)
+    var(--video-toaster-4000-shadow);
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-help {
+  color: var(--video-toaster-4000-muted);
+  font-size: 0.74rem;
+}

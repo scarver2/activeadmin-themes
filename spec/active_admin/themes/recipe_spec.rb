@@ -131,6 +131,17 @@ RSpec.describe ActiveAdmin::Themes::Recipe do
     expect(haiku.instructions).to include('@import "./active_admin_haiku_beta6.css";')
   end
 
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Video Toaster 4000 through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    toaster = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "video_toaster_4000"
+    )
+
+    expect(toaster.install).to eq(:created)
+    expect(File.binread(File.join(root, toaster.destination))).to eq(ActiveAdmin::Themes::VideoToaster4000.theme.source)
+    expect(toaster.instructions).to include('@import "./active_admin_video_toaster_4000.css";')
+  end
+
   it "requires an existing entrypoint" do
     File.unlink(File.join(root, "admin.css"))
     expect { recipe }.to raise_error(ArgumentError, "styling entrypoint does not exist")

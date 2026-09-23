@@ -1,0 +1,70 @@
+/* lib/active_admin/themes/recipes/video_toaster_4000/components/navigation.css */
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-screen-header {
+  align-items: center;
+  background: var(--video-toaster-4000-panel-soft);
+  border-bottom: 2px solid var(--video-toaster-4000-shadow);
+  box-shadow: inset 0 1px var(--video-toaster-4000-shine);
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 700;
+  gap: 0.35rem 1rem;
+  justify-content: space-between;
+  letter-spacing: 0.045em;
+  min-height: 44px;
+  padding: 0.35rem 0.6rem;
+  text-transform: uppercase;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-screen-header > span:first-child {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.45rem;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-screen-header > span:first-child::before {
+  background: var(--video-toaster-4000-amber);
+  border: 1px solid var(--video-toaster-4000-shadow);
+  border-radius: 50%;
+  content: "";
+  height: 0.72rem;
+  width: 0.72rem;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-screen-header > span:last-child {
+  color: var(--video-toaster-4000-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-navigation {
+  background: var(--video-toaster-4000-panel-soft);
+  border-bottom: 1px solid var(--video-toaster-4000-border);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.22rem;
+  padding: 0.28rem 0.45rem;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-navigation a {
+  align-items: center;
+  background: var(--video-toaster-4000-panel-raised);
+  border: 1px solid var(--video-toaster-4000-border);
+  border-bottom-color: var(--video-toaster-4000-shadow);
+  border-radius: var(--video-toaster-4000-radius);
+  color: var(--video-toaster-4000-control-text);
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  min-height: 42px;
+  padding: 0.35rem 0.7rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-navigation a:hover {
+  background: var(--video-toaster-4000-amber-muted);
+  border-color: var(--video-toaster-4000-amber);
+  color: var(--video-toaster-4000-selection-text);
+}
