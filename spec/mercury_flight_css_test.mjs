@@ -74,6 +74,26 @@ test("Mercury Flight foreground and concrete surface pairs meet WCAG AA", () => 
   assert.ok(contrast("#fffaf2", "#29292b") >= 4.5);
 });
 
+test("Mercury Flight keeps table header and record links legible on their own surfaces", () => {
+  const root = postcss.parse(source);
+  const declarationsFor = (selector) => {
+    const declarations = {};
+    root.walkRules(selector, (rule) => {
+      rule.walkDecls((declaration) => { declarations[declaration.prop] = declaration.value; });
+    });
+    return declarations;
+  };
+
+  assert.equal(
+    declarationsFor('body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table thead th a').color,
+    "#ffffff"
+  );
+  assert.equal(
+    declarationsFor('body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table tbody th a').color,
+    "var(--mercury-flight-coral-dark)"
+  );
+});
+
 test("Mercury Flight does not mutate the accepted Video Toaster recipe bytes", () => {
   const toaster = new URL("../lib/active_admin/themes/recipes/video_toaster_4000/", import.meta.url);
   const toasterSource = parts.map((part) => readFileSync(new URL(`${part}.css`, toaster), "utf8")).join("\n");
