@@ -35,6 +35,7 @@ The recipe's CSS, geometry, launcher meter, responsive rules, and accessibility 
 The fixed baseline is intentionally dark because the period LightWave/Toaster production workspace was a professional tool environment, not an Amiga Workbench skin. The two reference grammars remain distinct: Video Toaster contributes banked console grouping and action emphasis, while LightWave contributes top modes, an edge-tool relationship, a dominant work region, and a compact status/readout strip. They are not averaged into generic gray controls everywhere. Its visual grammar is:
 
 - a dark neutral tool field and graphite equipment panels;
+- a readable platform monospace stack that evokes the compact tool grammar without bundling a proprietary bitmap font;
 - compact uppercase bay labels and clear hierarchy;
 - recessed near-black data and inspection wells;
 - squared, lightly raised controls with visible active states;
