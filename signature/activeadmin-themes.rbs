@@ -123,6 +123,16 @@ module ActiveAdmin
 
         def self.source: () -> String
       end
+
+      module VideoToaster4000
+        SKIN_PARTS: Array[String]
+        COMPOSITION_PARTS: Array[String]
+        PARTS: Array[String]
+        SKIN_MANIFEST: StylesheetManifest
+        COMPOSITION_MANIFEST: StylesheetManifest
+
+        def self.source: () -> String
+      end
     end
 
     module Workbench13
@@ -174,6 +184,14 @@ module ActiveAdmin
     end
 
     module HaikuBeta6
+      SLOTS: Hash[Symbol, String]
+      SKIN: Skin
+      COMPOSITION: Composition
+
+      def self.theme: () -> Theme
+    end
+
+    module VideoToaster4000
       SLOTS: Hash[Symbol, String]
       SKIN: Skin
       COMPOSITION: Composition

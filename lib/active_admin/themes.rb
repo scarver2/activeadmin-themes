@@ -13,6 +13,7 @@ require "active_admin/themes/theme"
 require "active_admin/themes/texas_bluebonnet"
 require "active_admin/themes/v3"
 require "active_admin/themes/version"
+require "active_admin/themes/video_toaster_4000"
 require "active_admin/themes/workbench_13"
 require "active_admin/themes/workbench_2"
 require "active_admin/themes/workbench_3"
@@ -20,7 +21,8 @@ require "active_admin/themes/workbench_3"
 module ActiveAdmin
   module Themes
     THEME_BUILDERS = [
-      V3, TexasBluebonnet, Workbench13, Workbench2, Workbench3, Mui, AmigaOS4, AROSZune, HaikuBeta6
+      V3, TexasBluebonnet, Workbench13, Workbench2, Workbench3, Mui, AmigaOS4, AROSZune, HaikuBeta6,
+      VideoToaster4000
     ].freeze
 
     def self.registry

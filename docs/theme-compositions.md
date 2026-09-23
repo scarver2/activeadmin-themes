@@ -147,6 +147,12 @@ Haiku beta6 preserves the shared 24-role Heritage contract while proving a linea
 
 The host opts in with `data-activeadmin-theme="haiku_beta6"` and classes from `HaikuBeta6::COMPOSITION.slots`. The fixed light baseline provides deterministic review of the canonical yellow-tab grammar; the host may explicitly override semantic tokens. The recipe remains asset-free and does not recreate Tracker, Deskbar, Stack & Tile, decorator, or window-manager behavior. Exact beta6 source provenance, license boundaries, lineage distinctions, and accessibility adaptations are recorded in [Haiku R1/beta6 theme provenance](haiku-beta6.md).
 
+## Video Toaster 4000 / Period LightWave
+
+Video Toaster 4000 preserves the shared 24-role Heritage contract while proving a professional media-production lineage rather than another desktop or widget toolkit. Its independent `video-toaster-4000-*` namespace uses a dark neutral equipment field, compact labeled control bays, recessed data wells, and restrained cyan, green, amber, and red channel/status cues. It does not import or alias Haiku, AROS/Zune, AmigaOS 4, MUI, or Workbench concerns.
+
+The host opts in with `data-activeadmin-theme="video_toaster_4000"` and classes from `VideoToaster4000::COMPOSITION.slots`. The fixed dark baseline provides deterministic review of the period broadcast-workstation grammar; the host may explicitly override semantic tokens. The recipe remains CSS-only and asset-free. It does not reproduce a switcher, editor, Modeler, Layout, character generator, proprietary control, or media-production behavior. Historical scope, proprietary-reference boundaries, and accessibility adaptations are recorded in [Video Toaster 4000 theme provenance](video-toaster-4000.md).
+
 ## Showcase Migration Follow-up
 
 Showcase should replace its page-scoped monolithic CSS with the installed gem recipe, put the theme data attribute on `body`, apply the documented slot classes to its existing markup, and delete the promoted CSS. Its Account Explorer endpoint, React island, fallback, table semantics, routes, and tests remain Showcase-owned. Fresh exact-head desktop/narrow light/dark screenshots are required after that migration; the historical PR #73 images establish design intent but do not prove the new installed path.

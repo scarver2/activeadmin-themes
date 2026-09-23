@@ -1,0 +1,23 @@
+/* lib/active_admin/themes/recipes/video_toaster_4000/foundation/tokens.css */
+body[data-activeadmin-theme="video_toaster_4000"] {
+  --video-toaster-4000-field: #514b56;
+  --video-toaster-4000-panel: #656565;
+  --video-toaster-4000-panel-raised: #9a9a9a;
+  --video-toaster-4000-panel-soft: #555555;
+  --video-toaster-4000-well: #313131;
+  --video-toaster-4000-border: #9a9a9a;
+  --video-toaster-4000-shadow: #1b1b1b;
+  --video-toaster-4000-shine: #dfdfdf;
+  --video-toaster-4000-text: #f0f0f0;
+  --video-toaster-4000-control-text: #111111;
+  --video-toaster-4000-muted: #d0d0d0;
+  --video-toaster-4000-amber: #ffef75;
+  --video-toaster-4000-amber-muted: #ceba75;
+  --video-toaster-4000-red: #c52828;
+  --video-toaster-4000-selection: #ceba75;
+  --video-toaster-4000-selection-text: #111111;
+  --video-toaster-4000-focus: #ffef75;
+  --video-toaster-4000-radius: 0.2rem;
+  --video-toaster-4000-gap: 0.7rem;
+  color-scheme: dark;
+}
