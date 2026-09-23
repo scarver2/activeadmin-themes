@@ -35,6 +35,8 @@ The catalog also includes `:texas_bluebonnet`, the first full theme built on the
 
 `:haiku_beta6` translates Haiku R1/beta6's clear desktop and Tracker-era utility grammar into an original blue, gray, white, and iconic-yellow workspace. It preserves the partial-width active tab and clean control hierarchy without copying Haiku source, icons, fonts, screenshots, marks, or window-manager behavior.
 
+`:video_toaster_4000` translates the dense broadcast-workstation character of the 1993 Video Toaster 4000 and period LightWave into an original dark control-field composition. It uses labeled bays, recessed data wells, and restrained channel/status colors without copying NewTek or LightWave source, artwork, marks, screenshots, icons, fonts, or behavior.
+
 ```bash
 bundle exec rake 'activeadmin_themes:install[texas_bluebonnet,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[workbench_13,app/assets/stylesheets/active_admin.css]'
@@ -44,6 +46,7 @@ bundle exec rake 'activeadmin_themes:install[mui,app/assets/stylesheets/active_a
 bundle exec rake 'activeadmin_themes:install[amigaos_4,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[aros_zune,app/assets/stylesheets/active_admin.css]'
 bundle exec rake 'activeadmin_themes:install[haiku_beta6,app/assets/stylesheets/active_admin.css]'
+bundle exec rake 'activeadmin_themes:install[video_toaster_4000,app/assets/stylesheets/active_admin.css]'
 ```
 
 See [Theme composition architecture](docs/theme-compositions.md) for the host markup contract and migration boundary.

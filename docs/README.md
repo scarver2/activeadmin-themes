@@ -17,6 +17,7 @@
 - [AmigaOS 4 theme provenance](amigaos-4.md)
 - [AROS/Zune theme provenance](aros-zune.md)
 - [Haiku R1/beta6 theme provenance](haiku-beta6.md)
+- [Video Toaster 4000 theme provenance](video-toaster-4000.md)
 
 Deployment, operations, observability, and packaging are omitted because this repository ships a RubyGem, not a running service or end-user application. Distribution guidance will precede the first release.
 

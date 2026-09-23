@@ -1,0 +1,48 @@
+/* lib/active_admin/themes/recipes/video_toaster_4000/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace *,
+  body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace *::before,
+  body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body[data-activeadmin-theme="video_toaster_4000"] {
+    --video-toaster-4000-field: Canvas;
+    --video-toaster-4000-panel: Canvas;
+    --video-toaster-4000-panel-raised: ButtonFace;
+    --video-toaster-4000-panel-soft: Canvas;
+    --video-toaster-4000-well: Canvas;
+    --video-toaster-4000-border: CanvasText;
+    --video-toaster-4000-shadow: CanvasText;
+    --video-toaster-4000-shine: CanvasText;
+    --video-toaster-4000-text: CanvasText;
+    --video-toaster-4000-control-text: ButtonText;
+    --video-toaster-4000-muted: CanvasText;
+    --video-toaster-4000-amber: Highlight;
+    --video-toaster-4000-amber-muted: Highlight;
+    --video-toaster-4000-red: Highlight;
+    --video-toaster-4000-selection: Highlight;
+    --video-toaster-4000-selection-text: HighlightText;
+    --video-toaster-4000-focus: Highlight;
+  }
+
+  body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace,
+  body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace :is(a, button, select) {
+    background-image: none;
+  }
+
+  body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-workspace
+    :is(a, button, input, select, summary, [tabindex]):focus-visible {
+    box-shadow: none;
+    outline: 3px solid Highlight;
+  }
+
+  body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-launcher-art,
+  body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-launcher-art::after {
+    background: Highlight;
+  }
+}
