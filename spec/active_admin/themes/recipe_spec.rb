@@ -142,6 +142,17 @@ RSpec.describe ActiveAdmin::Themes::Recipe do
     expect(toaster.instructions).to include('@import "./active_admin_video_toaster_4000.css";')
   end
 
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Mercury Flight through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    mercury = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "mercury_flight"
+    )
+
+    expect(mercury.install).to eq(:created)
+    expect(File.binread(File.join(root, mercury.destination))).to eq(ActiveAdmin::Themes::MercuryFlight.theme.source)
+    expect(mercury.instructions).to include('@import "./active_admin_mercury_flight.css";')
+  end
+
   it "requires an existing entrypoint" do
     File.unlink(File.join(root, "admin.css"))
     expect { recipe }.to raise_error(ArgumentError, "styling entrypoint does not exist")

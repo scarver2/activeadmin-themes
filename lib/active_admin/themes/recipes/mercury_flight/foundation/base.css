@@ -1,0 +1,31 @@
+/* lib/active_admin/themes/recipes/mercury_flight/foundation/base.css */
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace {
+  background:
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 2%) 0 1px, transparent 1px 4px),
+    linear-gradient(135deg, var(--mercury-flight-backdrop), var(--mercury-flight-backdrop-deep));
+  border: 1px solid var(--mercury-flight-backdrop-deep);
+  color: var(--mercury-flight-ink);
+  font: 0.9rem/1.45 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  isolation: isolate;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace *,
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace *::before,
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace *::after {
+  box-sizing: border-box;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace a {
+  color: var(--mercury-flight-coral-dark);
+  text-underline-offset: 3px;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace
+  :is(a, button, input, select, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--mercury-flight-focus);
+  outline-offset: 3px;
+}
