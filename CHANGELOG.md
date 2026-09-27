@@ -14,6 +14,7 @@ This project has not published its first release.
 - Register MUI, AmigaOS 4, and AROS/Zune as independent configurable-toolkit heritage themes.
 - Register Haiku R1/beta6 as an independent yellow-tab desktop heritage theme.
 - Register Video Toaster 4000 as an independent broadcast-workstation heritage theme.
+- Register Mercury Flight as an independent campaign-operations heritage theme derived from Sheriff's preserved local corpus.
 - Preserve one host-owned installed stylesheet and zero runtime styling side effects.
 
 —

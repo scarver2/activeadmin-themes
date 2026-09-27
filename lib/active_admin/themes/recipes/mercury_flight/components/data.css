@@ -1,0 +1,77 @@
+/* lib/active_admin/themes/recipes/mercury_flight/components/data.css */
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-status {
+  color: var(--mercury-flight-muted);
+  font-size: 0.76rem;
+  margin-bottom: 0.7rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-region {
+  border: 1px solid var(--mercury-flight-border);
+  overflow-x: auto;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table {
+  border-collapse: collapse;
+  color: inherit;
+  font: inherit;
+  min-width: 42rem;
+  width: 100%;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table caption {
+  color: var(--mercury-flight-muted);
+  font-size: 0.76rem;
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table thead {
+  background: var(--mercury-flight-salmon);
+  color: #ffffff;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table :is(th, td) {
+  border-bottom: 1px solid var(--mercury-flight-border);
+  padding: 0.58rem 0.68rem;
+  text-align: left;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table th a {
+  display: inline-flex;
+  font-size: 0.74rem;
+  font-weight: 800;
+  min-height: 32px;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table thead th a {
+  color: #ffffff;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table tbody th a {
+  color: var(--mercury-flight-coral-dark);
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table tbody tr:nth-child(even) {
+  background: var(--mercury-flight-row-alt);
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table tbody tr:nth-child(odd) {
+  background: var(--mercury-flight-row);
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table tbody tr:focus-within,
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-data-table tbody tr:hover {
+  box-shadow: inset 0.3rem 0 var(--mercury-flight-coral);
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-status-tag {
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: var(--mercury-flight-positive);
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.12rem 0.46rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+}

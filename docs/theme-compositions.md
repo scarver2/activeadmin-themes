@@ -153,6 +153,12 @@ Video Toaster 4000 preserves the shared 24-role Heritage contract while proving 
 
 The host opts in with `data-activeadmin-theme="video_toaster_4000"` and classes from `VideoToaster4000::COMPOSITION.slots`. The fixed dark baseline provides deterministic review of the period broadcast-workstation grammar; the host may explicitly override semantic tokens. The recipe remains CSS-only and asset-free. It does not reproduce a switcher, editor, Modeler, Layout, character generator, proprietary control, or media-production behavior. Historical scope, proprietary-reference boundaries, and accessibility adaptations are recorded in [Video Toaster 4000 theme provenance](video-toaster-4000.md).
 
+## Mercury Flight
+
+Mercury Flight preserves the shared 24-role Heritage contract while proving a campaign-operations product lineage rather than an operating system, toolkit, or media-production console. Its independent `mercury-flight-*` namespace uses a warm oxblood surround, paper-white work surface, charcoal capability navigation, signal-coral actions, salmon data headers, and compact campaign rows. It does not import or alias Video Toaster, Haiku, AROS/Zune, AmigaOS 4, MUI, or Workbench concerns.
+
+The host opts in with `data-activeadmin-theme="mercury_flight"` and classes from `MercuryFlight::COMPOSITION.slots`. The fixed light baseline preserves the reference product's deliberate hierarchy while forced-colors remains user-controlled. The recipe is CSS-only and asset-free; it does not redistribute the preserved corpus's source, markup, images, fonts, icon font, names, data, or behavior. Corpus hashes, reuse boundaries, characteristic rules, and accessibility adaptations are recorded in [Mercury Flight theme provenance](mercury-flight.md).
+
 ## Showcase Migration Follow-up
 
 Showcase should replace its page-scoped monolithic CSS with the installed gem recipe, put the theme data attribute on `body`, apply the documented slot classes to its existing markup, and delete the promoted CSS. Its Account Explorer endpoint, React island, fallback, table semantics, routes, and tests remain Showcase-owned. Fresh exact-head desktop/narrow light/dark screenshots are required after that migration; the historical PR #73 images establish design intent but do not prove the new installed path.

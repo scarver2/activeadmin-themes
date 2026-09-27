@@ -1,0 +1,43 @@
+/* lib/active_admin/themes/recipes/mercury_flight/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace *,
+  body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace *::before,
+  body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body[data-activeadmin-theme="mercury_flight"] {
+    --mercury-flight-backdrop: Canvas;
+    --mercury-flight-backdrop-deep: CanvasText;
+    --mercury-flight-paper: Canvas;
+    --mercury-flight-paper-muted: Canvas;
+    --mercury-flight-ink: CanvasText;
+    --mercury-flight-muted: CanvasText;
+    --mercury-flight-coral: Highlight;
+    --mercury-flight-coral-dark: Highlight;
+    --mercury-flight-salmon: Highlight;
+    --mercury-flight-nav: Canvas;
+    --mercury-flight-nav-text: CanvasText;
+    --mercury-flight-border: CanvasText;
+    --mercury-flight-row: Canvas;
+    --mercury-flight-row-alt: Canvas;
+    --mercury-flight-positive: CanvasText;
+    --mercury-flight-warning: CanvasText;
+    --mercury-flight-danger: CanvasText;
+    --mercury-flight-focus: Highlight;
+  }
+
+  body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace,
+  body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace :is(a, button, select) {
+    background-image: none;
+  }
+
+  body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace
+    :is(a, button, input, select, summary, [tabindex]):focus-visible {
+    outline: 3px solid Highlight;
+  }
+}

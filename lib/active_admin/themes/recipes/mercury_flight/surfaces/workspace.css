@@ -1,0 +1,34 @@
+/* lib/active_admin/themes/recipes/mercury_flight/surfaces/workspace.css */
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace {
+  min-height: 650px;
+  padding-bottom: 1rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace
+  > :not(.mercury-flight-screen-header, .mercury-flight-navigation) {
+  margin-inline: 1rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-launcher-group {
+  margin-top: 1rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-workspace-grid {
+  align-items: start;
+  display: grid;
+  gap: var(--mercury-flight-gap);
+  grid-template-columns: minmax(0, 1fr) 17rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-footer {
+  background: var(--mercury-flight-nav);
+  border-top: 3px solid var(--mercury-flight-coral);
+  color: var(--mercury-flight-nav-text);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.74rem;
+  gap: 0.6rem;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0.55rem 0.7rem;
+}

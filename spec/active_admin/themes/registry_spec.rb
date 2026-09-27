@@ -11,7 +11,7 @@ RSpec.describe ActiveAdmin::Themes::Registry do
   let(:catalog_keys) do
     %w[
       v3 texas_bluebonnet workbench_13 workbench_2 workbench_3 mui amigaos_4 aros_zune haiku_beta6
-      video_toaster_4000
+      video_toaster_4000 mercury_flight
     ]
   end
 
