@@ -1,0 +1,46 @@
+/* lib/active_admin/themes/recipes/workbench_3/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace *,
+  body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace *::before,
+  body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body[data-activeadmin-theme="workbench-3"] {
+    --workbench-3-desktop: Canvas;
+    --workbench-3-surface: Canvas;
+    --workbench-3-text: CanvasText;
+    --workbench-3-shine: CanvasText;
+    --workbench-3-shadow: CanvasText;
+    --workbench-3-active: Highlight;
+    --workbench-3-active-line: HighlightText;
+    --workbench-3-active-text: HighlightText;
+    --workbench-3-inactive: Canvas;
+  }
+
+  body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace {
+    background-image: none;
+  }
+
+  body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace
+    :is(a, button, input, select, summary, [tabindex]):focus-visible {
+    box-shadow: none;
+    outline: 3px solid Highlight;
+  }
+
+  body[data-activeadmin-theme="workbench-3"] .workbench-3-window-header::after {
+    background: none;
+    border-top: 2px solid CanvasText;
+  }
+
+  body[data-activeadmin-theme="workbench-3"]
+    .workbench-3-workspace
+    :is(.workbench-3-form select, .workbench-3-primary-action, .workbench-3-secondary-action) {
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}
