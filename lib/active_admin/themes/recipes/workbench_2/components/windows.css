@@ -1,0 +1,82 @@
+/* lib/active_admin/themes/recipes/workbench_2/components/windows.css */
+body[data-activeadmin-theme="workbench-2"] .workbench-2-window {
+  background: var(--workbench-2-surface);
+  border-color: var(--workbench-2-shine) var(--workbench-2-shadow) var(--workbench-2-shadow)
+    var(--workbench-2-shine);
+  border-style: solid;
+  border-width: 3px;
+  box-shadow: 2px 2px 0 var(--workbench-2-text);
+  min-width: 0;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-primary-window {
+  min-width: 0;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-side-window {
+  margin-top: 1.5rem;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-wide-window {
+  grid-column: 1 / -1;
+  margin-left: 1.5rem;
+  max-width: 780px;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-window-header {
+  align-items: center;
+  background: var(--workbench-2-surface);
+  border-bottom: 2px solid var(--workbench-2-shadow);
+  box-shadow: inset 0 -1px 0 var(--workbench-2-shine);
+  color: var(--workbench-2-text);
+  display: flex;
+  font: inherit;
+  font-weight: 700;
+  gap: 0.5rem;
+  padding: 0.22rem 0.45rem;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-window-header::after {
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--workbench-2-shadow) 0,
+    var(--workbench-2-shadow) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  content: "";
+  flex: 1;
+  height: 10px;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-window-content {
+  padding: 0.75rem;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-side-window > .workbench-2-window-content {
+  display: grid;
+  gap: 1rem;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-wide-window > .workbench-2-window-content {
+  display: grid;
+  gap: 0.75rem;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-workspace summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-block: 0.6rem;
+  text-decoration: underline;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-window-actions {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+body[data-activeadmin-theme="workbench-2"] .workbench-2-window-actions a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+}

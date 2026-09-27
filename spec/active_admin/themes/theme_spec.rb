@@ -91,4 +91,15 @@ RSpec.describe ActiveAdmin::Themes::Theme do
     )
     expect(workbench.source).to eq(ActiveAdmin::Themes::Recipes::Workbench13.source)
   end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers Workbench 2.x as an independent fixed-presentation full theme" do # rubocop:disable RSpec/ExampleLength
+    workbench = ActiveAdmin::Themes::Workbench2.theme
+
+    expect([workbench.key, workbench.skin.key].map(&:to_s)).to eq(%w[workbench_2 workbench_2])
+    expect(workbench.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[workbench-2-launcher-art workbench-2-primary-window]
+    )
+    expect(workbench.source).to eq(ActiveAdmin::Themes::Recipes::Workbench2.source)
+  end
 end

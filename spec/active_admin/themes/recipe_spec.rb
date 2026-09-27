@@ -76,6 +76,17 @@ RSpec.describe ActiveAdmin::Themes::Recipe do
     expect(workbench.instructions).to include('@import "./active_admin_workbench_13.css";')
   end
 
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Workbench 2.x through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    workbench = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "workbench_2"
+    )
+
+    expect(workbench.install).to eq(:created)
+    expect(File.binread(File.join(root, workbench.destination))).to eq(ActiveAdmin::Themes::Workbench2.theme.source)
+    expect(workbench.instructions).to include('@import "./active_admin_workbench_2.css";')
+  end
+
   it "requires an existing entrypoint" do
     File.unlink(File.join(root, "admin.css"))
     expect { recipe }.to raise_error(ArgumentError, "styling entrypoint does not exist")
