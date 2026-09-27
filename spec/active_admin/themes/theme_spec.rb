@@ -135,4 +135,15 @@ RSpec.describe ActiveAdmin::Themes::Theme do
     )
     expect(amigaos.source).to eq(ActiveAdmin::Themes::Recipes::AmigaOS4.source)
   end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers Mercury Flight as an independent campaign-operations full theme" do # rubocop:disable RSpec/ExampleLength
+    mercury = ActiveAdmin::Themes::MercuryFlight.theme
+
+    expect([mercury.key, mercury.skin.key].map(&:to_s)).to eq(%w[mercury_flight mercury_flight])
+    expect(mercury.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[mercury-flight-launcher-art mercury-flight-primary-window]
+    )
+    expect(mercury.source).to eq(ActiveAdmin::Themes::Recipes::MercuryFlight.source)
+  end
 end

@@ -1,0 +1,24 @@
+/* lib/active_admin/themes/recipes/mercury_flight/foundation/tokens.css */
+body[data-activeadmin-theme="mercury_flight"] {
+  --mercury-flight-backdrop: #3c110b;
+  --mercury-flight-backdrop-deep: #260a07;
+  --mercury-flight-paper: #fffdf9;
+  --mercury-flight-paper-muted: #f5eee7;
+  --mercury-flight-ink: #2f3033;
+  --mercury-flight-muted: #665f5a;
+  --mercury-flight-coral: #e44d34;
+  --mercury-flight-coral-dark: #a73829;
+  --mercury-flight-salmon: #b94535;
+  --mercury-flight-nav: #29292b;
+  --mercury-flight-nav-text: #fffaf2;
+  --mercury-flight-border: #c9bdb2;
+  --mercury-flight-row: #faf6f1;
+  --mercury-flight-row-alt: #f0e8e0;
+  --mercury-flight-positive: #1f6a4b;
+  --mercury-flight-warning: #8b4d00;
+  --mercury-flight-danger: #9f251d;
+  --mercury-flight-focus: #075ea8;
+  --mercury-flight-radius: 0.28rem;
+  --mercury-flight-gap: 0.85rem;
+  color-scheme: light;
+}
