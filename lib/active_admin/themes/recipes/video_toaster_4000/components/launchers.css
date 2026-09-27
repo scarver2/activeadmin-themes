@@ -1,0 +1,77 @@
+/* lib/active_admin/themes/recipes/video_toaster_4000/components/launchers.css */
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-launcher-group {
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--video-toaster-4000-gap);
+  margin-bottom: 1rem;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] a.video-toaster-4000-launcher {
+  align-items: center;
+  background: var(--video-toaster-4000-panel);
+  border: 1px solid var(--video-toaster-4000-border);
+  border-bottom-color: var(--video-toaster-4000-shadow);
+  border-radius: var(--video-toaster-4000-radius);
+  box-shadow: inset 1px 1px rgb(255 255 255 / 8%), 0 2px 4px rgb(0 0 0 / 35%);
+  display: grid;
+  gap: 0.55rem;
+  grid-template-columns: 54px minmax(86px, 1fr);
+  min-height: 70px;
+  min-width: 170px;
+  padding: 0.5rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] a.video-toaster-4000-launcher:hover {
+  background: var(--video-toaster-4000-amber-muted);
+  border-color: var(--video-toaster-4000-amber);
+  color: var(--video-toaster-4000-selection-text);
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-launcher-art {
+  background:
+    linear-gradient(to right, transparent 0 31%, var(--video-toaster-4000-shadow) 31% 34%, transparent 34% 65%, var(--video-toaster-4000-shadow) 65% 68%, transparent 68%),
+    linear-gradient(to bottom, var(--video-toaster-4000-panel-raised) 0 47%, var(--video-toaster-4000-shadow) 47% 53%, var(--video-toaster-4000-panel) 53%);
+  border: 2px solid var(--video-toaster-4000-shadow);
+  box-shadow: inset 0 0 0 1px var(--video-toaster-4000-border);
+  display: block;
+  height: 34px;
+  position: relative;
+  width: 48px;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-launcher-art::before {
+  background: linear-gradient(var(--video-toaster-4000-amber), var(--video-toaster-4000-amber-muted));
+  content: "";
+  height: 12px;
+  left: 17px;
+  position: absolute;
+  top: 3px;
+  width: 13px;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-launcher-art::after {
+  background: var(--video-toaster-4000-panel-raised);
+  bottom: -7px;
+  box-shadow: 12px 0 var(--video-toaster-4000-panel-raised), 24px 0 var(--video-toaster-4000-amber);
+  content: "";
+  height: 3px;
+  left: 3px;
+  position: absolute;
+  width: 7px;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-launcher-group > p:last-child {
+  background: var(--video-toaster-4000-well);
+  border: 1px solid var(--video-toaster-4000-border);
+  border-left: 0.3rem solid var(--video-toaster-4000-amber-muted);
+  color: var(--video-toaster-4000-muted);
+  margin-left: auto !important;
+  padding: 0.45rem 0.6rem;
+  text-align: right;
+}
+
+body[data-activeadmin-theme="video_toaster_4000"] .video-toaster-4000-launcher-group > p:last-child small {
+  font-size: 0.72rem;
+}
