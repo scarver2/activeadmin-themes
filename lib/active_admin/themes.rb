@@ -2,6 +2,7 @@
 # frozen_string_literal: true
 
 require "active_admin/themes/composition"
+require "active_admin/themes/mui"
 require "active_admin/themes/registry"
 require "active_admin/themes/skin"
 require "active_admin/themes/stylesheet_manifest"
@@ -22,6 +23,7 @@ module ActiveAdmin
         registry.register(Workbench13.theme)
         registry.register(Workbench2.theme)
         registry.register(Workbench3.theme)
+        registry.register(Mui.theme)
       end
     end
   end

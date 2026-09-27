@@ -1,0 +1,50 @@
+/* lib/active_admin/themes/recipes/mui/hardening/preferences.css */
+@media (prefers-reduced-motion: reduce) {
+  body[data-activeadmin-theme="mui"] .mui-workspace *,
+  body[data-activeadmin-theme="mui"] .mui-workspace *::before,
+  body[data-activeadmin-theme="mui"] .mui-workspace *::after {
+    animation: none;
+    scroll-behavior: auto;
+    transition: none;
+  }
+}
+
+@media (forced-colors: active) {
+  body[data-activeadmin-theme="mui"] {
+    --mui-desktop: Canvas;
+    --mui-surface: Canvas;
+    --mui-surface-soft: Canvas;
+    --mui-field: Field;
+    --mui-text: CanvasText;
+    --mui-muted: CanvasText;
+    --mui-shine: CanvasText;
+    --mui-shadow: CanvasText;
+    --mui-deep-shadow: CanvasText;
+    --mui-active: Highlight;
+    --mui-active-soft: Highlight;
+    --mui-active-text: HighlightText;
+    --mui-accent: LinkText;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-workspace {
+    background-image: none;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-workspace
+    :is(a, button, input, select, summary, [tabindex]):focus-visible {
+    box-shadow: none;
+    outline: 3px solid Highlight;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-window-header::after {
+    background: none;
+    border-top: 2px solid CanvasText;
+  }
+
+  body[data-activeadmin-theme="mui"]
+    .mui-workspace
+    :is(.mui-form select, .mui-primary-action, .mui-secondary-action) {
+    background: ButtonFace;
+    color: ButtonText;
+  }
+}

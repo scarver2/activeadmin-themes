@@ -1,0 +1,51 @@
+/* lib/active_admin/themes/recipes/mui/hardening/responsive.css */
+@media (max-width: 1100px) {
+  body[data-activeadmin-theme="mui"] .mui-workspace-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-side-window {
+    margin-top: 0;
+    max-width: 440px;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-wide-window {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body[data-activeadmin-theme="mui"] .mui-workspace {
+    font-size: 0.875rem;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-workspace
+    > :not(.mui-screen-header, .mui-navigation) {
+    padding: 0.6rem;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-screen-header {
+    gap: 0.25rem;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-screen-header > span {
+    width: 100%;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-screen-header > span:last-child {
+    margin-left: 0;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-launcher-group {
+    gap: 0.5rem;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-launcher {
+    min-width: 84px;
+  }
+
+  body[data-activeadmin-theme="mui"] .mui-launcher-group > p:last-child {
+    text-align: left;
+    width: 100%;
+  }
+}

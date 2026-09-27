@@ -1,0 +1,20 @@
+/* lib/active_admin/themes/recipes/mui/foundation/tokens.css */
+body[data-activeadmin-theme="mui"] {
+  --mui-desktop: #566166;
+  --mui-surface: #c9cecc;
+  --mui-surface-soft: #dde1df;
+  --mui-field: #f4f6f5;
+  --mui-text: #172026;
+  --mui-muted: #48565c;
+  --mui-shine: #ffffff;
+  --mui-shadow: #687478;
+  --mui-deep-shadow: #2e393e;
+  --mui-active: #2f6f73;
+  --mui-active-soft: #8db5b3;
+  --mui-active-text: #ffffff;
+  --mui-accent: #cf8732;
+  --mui-frame-radius: 0.45rem;
+  --mui-inner-radius: 0.25rem;
+  --mui-object-gap: 0.75rem;
+  color-scheme: light;
+}
