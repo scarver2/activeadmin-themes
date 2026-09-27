@@ -124,4 +124,15 @@ RSpec.describe ActiveAdmin::Themes::Theme do
     )
     expect(mui.source).to eq(ActiveAdmin::Themes::Recipes::Mui.source)
   end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers AmigaOS 4 as an independent ReAction-era full theme" do # rubocop:disable RSpec/ExampleLength
+    amigaos = ActiveAdmin::Themes::AmigaOS4.theme
+
+    expect([amigaos.key, amigaos.skin.key].map(&:to_s)).to eq(%w[amigaos_4 amigaos_4])
+    expect(amigaos.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[amigaos-4-launcher-art amigaos-4-primary-window]
+    )
+    expect(amigaos.source).to eq(ActiveAdmin::Themes::Recipes::AmigaOS4.source)
+  end
 end

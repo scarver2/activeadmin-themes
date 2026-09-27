@@ -1,0 +1,107 @@
+/* lib/active_admin/themes/recipes/amigaos_4/components/windows.css */
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window {
+  background: var(--amigaos-4-surface);
+  border: 1px solid var(--amigaos-4-deep-shadow);
+  border-radius: var(--amigaos-4-frame-radius);
+  box-shadow:
+    0 7px 18px rgb(19 39 54 / 28%),
+    inset 1px 1px var(--amigaos-4-shine),
+    inset -1px -1px var(--amigaos-4-shadow);
+  min-width: 0;
+  overflow: clip;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-primary-window {
+  min-width: 0;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-side-window {
+  margin-top: 1rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-wide-window {
+  grid-column: 1 / -1;
+  margin-left: 1rem;
+  max-width: 840px;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window-header {
+  align-items: center;
+  background: linear-gradient(to bottom, #edf3f6, #c1cfd8);
+  border-bottom: 1px solid var(--amigaos-4-shadow);
+  color: var(--amigaos-4-text);
+  display: flex;
+  font: inherit;
+  font-weight: 700;
+  gap: 0.55rem;
+  min-height: 34px;
+  padding: 0.35rem 0.6rem;
+  text-shadow: 0 1px var(--amigaos-4-shine);
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window-header::before {
+  background: linear-gradient(to bottom, #ffffff, #aebec8);
+  border: 1px solid var(--amigaos-4-deep-shadow);
+  border-radius: 0.2rem;
+  box-shadow: inset 1px 1px var(--amigaos-4-shine);
+  content: "";
+  flex: 0 0 13px;
+  height: 13px;
+}
+
+body[data-activeadmin-theme="amigaos_4"]
+  :is(.amigaos-4-primary-window, .amigaos-4-wide-window)
+  > .amigaos-4-window-header {
+  background: linear-gradient(to bottom, #45a9e9, var(--amigaos-4-active) 48%, var(--amigaos-4-active-deep));
+  border-bottom-color: var(--amigaos-4-active-deep);
+  color: var(--amigaos-4-active-text);
+  text-shadow: 0 1px var(--amigaos-4-active-deep);
+}
+
+body[data-activeadmin-theme="amigaos_4"]
+  :is(.amigaos-4-primary-window, .amigaos-4-wide-window)
+  > .amigaos-4-window-header::before {
+  background: linear-gradient(to bottom, #fff8d9, var(--amigaos-4-accent));
+  border-color: #75480b;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window-header::after {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 55%) 0 1px,
+    transparent 1px 3px
+  );
+  content: "";
+  flex: 1;
+  height: 12px;
+  opacity: 0.75;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window-content {
+  padding: 0.9rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-side-window > .amigaos-4-window-content,
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-wide-window > .amigaos-4-window-content {
+  display: grid;
+  gap: 0.85rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding-block: 0.6rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window-actions {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-window-actions a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 44px;
+}

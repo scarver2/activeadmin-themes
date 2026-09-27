@@ -1,6 +1,7 @@
 # lib/active_admin/themes.rb
 # frozen_string_literal: true
 
+require "active_admin/themes/amigaos_4"
 require "active_admin/themes/composition"
 require "active_admin/themes/mui"
 require "active_admin/themes/registry"
@@ -24,6 +25,7 @@ module ActiveAdmin
         registry.register(Workbench2.theme)
         registry.register(Workbench3.theme)
         registry.register(Mui.theme)
+        registry.register(AmigaOS4.theme)
       end
     end
   end

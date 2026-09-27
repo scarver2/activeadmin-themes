@@ -1,0 +1,54 @@
+/* lib/active_admin/themes/recipes/amigaos_4/components/forms.css */
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-form select {
+  width: 100%;
+}
+
+body[data-activeadmin-theme="amigaos_4"]
+  :where(.amigaos-4-form select, .amigaos-4-primary-action, .amigaos-4-secondary-action) {
+  background: linear-gradient(to bottom, var(--amigaos-4-field), #dfe8ed);
+  border-color: var(--amigaos-4-shine) var(--amigaos-4-shadow) var(--amigaos-4-shadow)
+    var(--amigaos-4-shine);
+  border-radius: var(--amigaos-4-control-radius);
+  border-style: solid;
+  border-width: 2px;
+  color: var(--amigaos-4-text);
+  font: inherit;
+  min-height: 44px;
+  padding: 0.35rem 0.65rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace .amigaos-4-primary-action {
+  background: linear-gradient(to bottom, #4bace9, var(--amigaos-4-active) 55%, var(--amigaos-4-active-deep));
+  border-color: #75c7f5 #073d6a #073d6a #75c7f5;
+  color: var(--amigaos-4-active-text);
+  cursor: pointer;
+  text-shadow: 0 1px var(--amigaos-4-active-deep);
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace .amigaos-4-secondary-action {
+  align-items: center;
+  display: inline-flex;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace
+  :is(.amigaos-4-primary-action, .amigaos-4-secondary-action):active {
+  border-color: var(--amigaos-4-shadow) var(--amigaos-4-shine) var(--amigaos-4-shine)
+    var(--amigaos-4-shadow);
+  box-shadow: inset 1px 2px rgb(32 55 70 / 25%);
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-help {
+  color: var(--amigaos-4-muted);
+  font-size: 0.75rem;
+}
