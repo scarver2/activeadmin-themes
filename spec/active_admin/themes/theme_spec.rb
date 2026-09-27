@@ -80,4 +80,15 @@ RSpec.describe ActiveAdmin::Themes::Theme do
     expect(composition.class_for(:primary_action)).to eq("bluebonnet-primary-action")
     expect(composition.class_for(:data_heading)).to eq("bluebonnet-data-heading")
   end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers Workbench 1.3 as a fixed-presentation full theme" do # rubocop:disable RSpec/ExampleLength
+    workbench = ActiveAdmin::Themes::Workbench13.theme
+
+    expect([workbench.key, workbench.skin.key].map(&:to_s)).to eq(%w[workbench_13 workbench_13])
+    expect(workbench.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[workbench-13-launcher-art workbench-13-primary-window]
+    )
+    expect(workbench.source).to eq(ActiveAdmin::Themes::Recipes::Workbench13.source)
+  end
 end

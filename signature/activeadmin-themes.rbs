@@ -53,6 +53,24 @@ module ActiveAdmin
 
         def self.source: () -> String
       end
+
+      module Workbench13
+        SKIN_PARTS: Array[String]
+        COMPOSITION_PARTS: Array[String]
+        PARTS: Array[String]
+        SKIN_MANIFEST: StylesheetManifest
+        COMPOSITION_MANIFEST: StylesheetManifest
+
+        def self.source: () -> String
+      end
+    end
+
+    module Workbench13
+      SLOTS: Hash[Symbol, String]
+      SKIN: Skin
+      COMPOSITION: Composition
+
+      def self.theme: () -> Theme
     end
 
     class Recipe
