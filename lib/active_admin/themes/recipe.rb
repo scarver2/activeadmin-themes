@@ -3,7 +3,6 @@
 
 require "active_admin/themes"
 require "active_admin/themes/installation_plan"
-require "active_admin/themes/recipes/v3"
 
 module ActiveAdmin
   module Themes
@@ -46,7 +45,7 @@ module ActiveAdmin
       private
 
       def source
-        Recipes::V3.source
+        theme.source
       end
 
       def plan

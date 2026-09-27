@@ -6,9 +6,50 @@ module ActiveAdmin
 
     def self.registry: () -> Registry
 
+    class StylesheetManifest
+      attr_reader parts: Array[String]
+
+      def initialize: (root: String, parts: Array[String]) -> void
+      def source: () -> String
+    end
+
+    class Skin < Data
+      attr_reader key: Symbol
+      attr_reader name: String
+      attr_reader description: String
+      attr_reader manifest: StylesheetManifest
+
+      def source: () -> String
+    end
+
+    class Composition < Data
+      attr_reader key: Symbol
+      attr_reader name: String
+      attr_reader description: String
+      attr_reader manifest: StylesheetManifest
+      attr_reader slots: Hash[Symbol, String]
+
+      def source: () -> String
+      def class_for: (String | Symbol slot) -> String
+    end
+
     module Recipes
       module V3
+        SKIN_PARTS: Array[String]
+        COMPOSITION_PARTS: Array[String]
         PARTS: Array[String]
+        SKIN_MANIFEST: StylesheetManifest
+        COMPOSITION_MANIFEST: StylesheetManifest
+
+        def self.source: () -> String
+      end
+
+      module TexasBluebonnet
+        SKIN_PARTS: Array[String]
+        COMPOSITION_PARTS: Array[String]
+        PARTS: Array[String]
+        SKIN_MANIFEST: StylesheetManifest
+        COMPOSITION_MANIFEST: StylesheetManifest
 
         def self.source: () -> String
       end
@@ -41,8 +82,11 @@ module ActiveAdmin
       attr_reader description: String
       attr_reader active_admin_requirement: Gem::Requirement
       attr_reader recipe_version: String
+      attr_reader skin: Skin
+      attr_reader composition: Composition
 
       def supports?: (String | Gem::Version version) -> bool
+      def source: () -> String
     end
 
     class Registry

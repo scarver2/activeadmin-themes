@@ -1,4 +1,4 @@
-# lib/active_admin/themes/recipes/v3.rb
+# lib/active_admin/themes/recipes/texas_bluebonnet.rb
 # frozen_string_literal: true
 
 require "active_admin/themes/stylesheet_manifest"
@@ -6,23 +6,20 @@ require "active_admin/themes/stylesheet_manifest"
 module ActiveAdmin
   module Themes
     module Recipes
-      module V3
+      module TexasBluebonnet
         SKIN_PARTS = %w[foundation/tokens].freeze
         COMPOSITION_PARTS = %w[
           foundation/base
           components/navigation
-          components/tables
-          components/filters
-          components/forms
-          components/panels
-          components/feedback
-          surfaces/login
-          surfaces/dashboard
+          components/actions
+          components/data
+          components/support
+          surfaces/workspace
           hardening/responsive
           hardening/preferences
         ].freeze
         PARTS = (SKIN_PARTS + COMPOSITION_PARTS).freeze
-        ROOT = File.expand_path("v3", __dir__).freeze
+        ROOT = File.expand_path("texas_bluebonnet", __dir__).freeze
         SKIN_MANIFEST = StylesheetManifest.new(root: ROOT, parts: SKIN_PARTS)
         COMPOSITION_MANIFEST = StylesheetManifest.new(root: ROOT, parts: COMPOSITION_PARTS)
 

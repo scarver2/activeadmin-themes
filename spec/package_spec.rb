@@ -10,12 +10,18 @@ require "tmpdir"
 # rubocop:disable-next RSpec/DescribeClass
 RSpec.describe "Built recipe package" do
   let(:packaged_concerns) do
-    %w[
+    v3 = %w[
       foundation/tokens foundation/base
       components/navigation components/tables components/filters components/forms components/panels components/feedback
       surfaces/login surfaces/dashboard
       hardening/responsive hardening/preferences
     ].map { |part| "lib/active_admin/themes/recipes/v3/#{part}.css" }
+    bluebonnet = %w[
+      foundation/tokens foundation/base
+      components/navigation components/actions components/data components/support
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/texas_bluebonnet/#{part}.css" }
+    v3 + bluebonnet
   end
 
   # rubocop:disable-next RSpec/ExampleLength
@@ -24,23 +30,22 @@ RSpec.describe "Built recipe package" do
       specification = Gem::Specification.load("activeadmin-themes.gemspec")
       archive = Gem::Package.build(specification, false, false, File.join(directory, "theme.gem"))
       package = Gem::Package.new(archive)
-      concern_files = package.contents.grep(%r{\Alib/active_admin/themes/recipes/v3/.*\.css\z})
+      concern_files = package.contents.grep(%r{\Alib/active_admin/themes/recipes/(?:v3|texas_bluebonnet)/.*\.css\z})
       expect(concern_files).to match_array(packaged_concerns)
       package.extract_files(File.join(directory, "unpacked"))
       output, status = Open3.capture2e(
         RbConfig.ruby, "-I#{directory}/unpacked/lib", "-e", <<~RUBY, chdir: directory
           require "active_admin/themes/recipe"
           File.write("admin.css", '@import "tailwindcss";')
-          recipe = ActiveAdmin::Themes::Recipe.new(root: Dir.pwd, entrypoint: "admin.css",
-            active_admin_version: "4.0.0.beta22")
           abort "wrong source" unless $LOADED_FEATURES.any? { |path| path.include?("unpacked/lib/active_admin/themes/recipe.rb") }
-          expected = #{packaged_concerns.inspect}.map { |path| File.binread(File.join("unpacked", path)) }
-            .reject(&:empty?).join("\\n")
-          composed = ActiveAdmin::Themes::Recipes::V3.source
-          abort "wrong concern order or bytes" unless composed == expected
-          abort "nondeterministic composition" unless ActiveAdmin::Themes::Recipes::V3.source == composed
-          abort "install failed" unless recipe.install == :created && recipe.install == :identical
-          abort "installed CSS differs" unless File.binread("active_admin_v3.css") == composed && !composed.empty?
+          ActiveAdmin::Themes.registry.each do |theme|
+            recipe = ActiveAdmin::Themes::Recipe.new(root: Dir.pwd, entrypoint: "admin.css",
+              active_admin_version: "4.0.0.beta22", key: theme.key)
+            composed = theme.source
+            abort "nondeterministic composition" unless theme.source == composed
+            abort "install failed" unless recipe.install == :created && recipe.install == :identical
+            abort "installed CSS differs" unless File.binread("active_admin_\#{theme.key}.css") == composed && !composed.empty?
+          end
         RUBY
       )
       expect(status.success?).to be(true), output

@@ -1,0 +1,55 @@
+/* lib/active_admin/themes/recipes/texas_bluebonnet/surfaces/workspace.css */
+.bluebonnet-heading {
+  align-items: end;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  padding: 34px 0 30px;
+}
+.bluebonnet-eyebrow {
+  color: var(--aat-link);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.bluebonnet-eyebrow span { color: var(--aat-muted); font-weight: 400; margin-inline-start: 18px; }
+.bluebonnet-heading h1 {
+  font-size: clamp(32px, 3.3vw, 52px);
+  font-weight: 650;
+  letter-spacing: -.055em;
+  line-height: 1.08;
+  margin: 13px 0;
+}
+.bluebonnet-heading h1 span { color: var(--aat-link); }
+.bluebonnet-heading > div > p:last-child { color: var(--aat-muted); font-size: 14px; }
+.bluebonnet-workspace-bar {
+  align-items: center;
+  border-bottom: 2px solid var(--aat-text);
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+.bluebonnet-current {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 9px;
+  padding: 14px 0;
+}
+.bluebonnet-current svg { fill: none; height: 18px; stroke: currentColor; stroke-width: 1.6; width: 18px; }
+.bluebonnet-source { color: var(--aat-muted); font-size: 11px; }
+.bluebonnet-content { display: grid; gap: 28px; grid-template-columns: minmax(0, 1fr) 240px; }
+.bluebonnet-data { min-width: 0; padding-top: 24px; }
+.bluebonnet-footnote {
+  border-top: 1px solid var(--aat-border);
+  color: var(--aat-muted);
+  display: flex;
+  font-size: 10px;
+  gap: 20px;
+  justify-content: space-between;
+  letter-spacing: .05em;
+  margin-top: 30px;
+  padding: 18px 0;
+}

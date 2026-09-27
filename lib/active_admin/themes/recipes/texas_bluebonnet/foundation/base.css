@@ -1,0 +1,15 @@
+/* lib/active_admin/themes/recipes/texas_bluebonnet/foundation/base.css */
+body[data-activeadmin-theme="texas-bluebonnet"] {
+  background: var(--aat-background);
+  color: var(--aat-text);
+}
+
+body[data-activeadmin-theme="texas-bluebonnet"] [data-test-page-header] { display: none; }
+body[data-activeadmin-theme="texas-bluebonnet"] [data-test-page-content] { display: block; padding: 0; }
+body[data-activeadmin-theme="texas-bluebonnet"] :focus-visible {
+  outline: 3px solid var(--aat-focus);
+  outline-offset: 3px;
+}
+
+.bluebonnet-workspace { min-height: calc(100vh - 64px); padding: 0 36px; }
+.bluebonnet-workspace a { color: var(--aat-link); }

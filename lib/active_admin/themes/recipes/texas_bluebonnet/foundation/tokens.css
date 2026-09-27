@@ -1,0 +1,28 @@
+/* lib/active_admin/themes/recipes/texas_bluebonnet/foundation/tokens.css */
+body[data-activeadmin-theme="texas-bluebonnet"] {
+  --aat-background: #f2eee5;
+  --aat-surface: #fffaf0;
+  --aat-subtle: #e7dfcf;
+  --aat-text: #182f45;
+  --aat-muted: #536579;
+  --aat-link: #135f8c;
+  --aat-border: #7d6f5c;
+  --aat-chrome: #12344d;
+  --aat-selected: #c9e2ee;
+  --aat-focus: #b33a1f;
+  --aat-on-chrome: #f7ead5;
+}
+
+html.dark body[data-activeadmin-theme="texas-bluebonnet"] {
+  --aat-background: #101b25;
+  --aat-surface: #172a39;
+  --aat-subtle: #243b4d;
+  --aat-text: #f7ead5;
+  --aat-muted: #c9bfae;
+  --aat-link: #80c7e8;
+  --aat-border: #95846d;
+  --aat-chrome: #07131d;
+  --aat-selected: #254f69;
+  --aat-focus: #ffb49e;
+  --aat-on-chrome: #f7ead5;
+}
