@@ -141,6 +141,12 @@ AROS/Zune preserves the same 24 semantic Heritage roles while deliberately provi
 
 The host opts in with `data-activeadmin-theme="aros_zune"` and classes from `AROSZune::COMPOSITION.slots`. The fixed light baseline exists for deterministic review; hosts may override semantic tokens to exercise Zune's user-owned presentation principle. The recipe remains asset-free and does not recreate Zune classes, AROS preferences, Wanderer behavior, or MUI compatibility APIs. Its primary-source provenance, APL boundary, lineage distinctions, and accessibility adaptations are recorded in [AROS/Zune theme provenance](aros-zune.md).
 
+## Haiku R1/beta6
+
+Haiku beta6 preserves the shared 24-role Heritage contract while proving a lineage outside the Amiga toolkit sequence. Its independent `haiku-beta6-*` namespace uses the beta6 default blue desktop, light-gray control field, white document well, blue focus/highlight, and iconic yellow partial-width active tab. The recipe does not import or alias any Workbench, MUI, AmigaOS 4, or AROS/Zune concern.
+
+The host opts in with `data-activeadmin-theme="haiku_beta6"` and classes from `HaikuBeta6::COMPOSITION.slots`. The fixed light baseline provides deterministic review of the canonical yellow-tab grammar; the host may explicitly override semantic tokens. The recipe remains asset-free and does not recreate Tracker, Deskbar, Stack & Tile, decorator, or window-manager behavior. Exact beta6 source provenance, license boundaries, lineage distinctions, and accessibility adaptations are recorded in [Haiku R1/beta6 theme provenance](haiku-beta6.md).
+
 ## Showcase Migration Follow-up
 
 Showcase should replace its page-scoped monolithic CSS with the installed gem recipe, put the theme data attribute on `body`, apply the documented slot classes to its existing markup, and delete the promoted CSS. Its Account Explorer endpoint, React island, fallback, table semantics, routes, and tests remain Showcase-owned. Fresh exact-head desktop/narrow light/dark screenshots are required after that migration; the historical PR #73 images establish design intent but do not prove the new installed path.

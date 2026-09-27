@@ -8,7 +8,9 @@ RSpec.describe ActiveAdmin::Themes::Registry do
   subject(:registry) { described_class.new }
 
   let(:theme) { ActiveAdmin::Themes::V3.theme }
-  let(:catalog_keys) { %w[v3 texas_bluebonnet workbench_13 workbench_2 workbench_3 mui amigaos_4 aros_zune] }
+  let(:catalog_keys) do
+    %w[v3 texas_bluebonnet workbench_13 workbench_2 workbench_3 mui amigaos_4 aros_zune haiku_beta6]
+  end
 
   it "registers and fetches a theme by string or symbol key" do
     registry.register(theme)
