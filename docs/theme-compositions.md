@@ -135,6 +135,12 @@ MUI preserves the shared 24-role Heritage contract while replacing the desktop-w
 
 The host opts in with `data-activeadmin-theme="mui"` and classes from `Mui::COMPOSITION.slots`. The recipe remains asset-free and does not recreate MUI runtime classes, preferences, requesters, or behavior. Its provenance, lineage boundary, accessibility adaptations, and dedication are recorded in [MUI theme provenance](mui.md).
 
+## AROS/Zune
+
+AROS/Zune preserves the same 24 semantic Heritage roles while deliberately proving that a compatible toolkit lineage need not share presentation bytes. Its independent `aros-zune-*` namespace uses an AROS Default–inspired warm object field, blue active frames, amber selection, compact push-button navigation, and preference-driven object grouping. It does not import or alias MUI or AmigaOS 4 concerns.
+
+The host opts in with `data-activeadmin-theme="aros_zune"` and classes from `AROSZune::COMPOSITION.slots`. The fixed light baseline exists for deterministic review; hosts may override semantic tokens to exercise Zune's user-owned presentation principle. The recipe remains asset-free and does not recreate Zune classes, AROS preferences, Wanderer behavior, or MUI compatibility APIs. Its primary-source provenance, APL boundary, lineage distinctions, and accessibility adaptations are recorded in [AROS/Zune theme provenance](aros-zune.md).
+
 ## Showcase Migration Follow-up
 
 Showcase should replace its page-scoped monolithic CSS with the installed gem recipe, put the theme data attribute on `body`, apply the documented slot classes to its existing markup, and delete the promoted CSS. Its Account Explorer endpoint, React island, fallback, table semantics, routes, and tests remain Showcase-owned. Fresh exact-head desktop/narrow light/dark screenshots are required after that migration; the historical PR #73 images establish design intent but do not prove the new installed path.

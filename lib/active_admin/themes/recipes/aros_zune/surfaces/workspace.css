@@ -1,0 +1,32 @@
+/* lib/active_admin/themes/recipes/aros_zune/surfaces/workspace.css */
+body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace {
+  min-height: 660px;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace
+  > :not(.aros-zune-screen-header, .aros-zune-navigation) {
+  padding: 1.1rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-workspace-grid {
+  align-items: start;
+  display: grid;
+  gap: var(--aros-zune-object-gap);
+  grid-template-columns: minmax(0, 1fr) 290px;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-footer {
+  background: linear-gradient(to bottom, var(--aros-zune-surface), var(--aros-zune-surface-soft));
+  border-color: var(--aros-zune-shine) var(--aros-zune-shadow) var(--aros-zune-shadow)
+    var(--aros-zune-shine);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: var(--aros-zune-frame-radius);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-top: 1.35rem;
+  padding: 0.4rem 0.5rem;
+}
