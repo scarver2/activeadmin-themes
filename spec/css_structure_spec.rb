@@ -17,7 +17,10 @@ RSpec.describe "CSS structural migration contract" do
   end
 
   it "rejects adversarial cascade and structure changes" do
-    output, status = Open3.capture2e("node", "--test", "spec/css_structure_test.mjs", "spec/css_migrations_test.mjs")
+    output, status = Open3.capture2e(
+      "node", "--test", "spec/css_structure_test.mjs", "spec/css_migrations_test.mjs", "spec/workbench2_css_test.mjs",
+      "spec/video_toaster_4000_css_test.mjs", "spec/mercury_flight_css_test.mjs"
+    )
 
     expect(status.success?).to be(true), output
   end

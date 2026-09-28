@@ -65,6 +65,94 @@ RSpec.describe ActiveAdmin::Themes::Recipe do
     expect(bluebonnet.instructions).to include('@import "./active_admin_texas_bluebonnet.css";')
   end
 
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Workbench 1.3 through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    workbench = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "workbench_13"
+    )
+
+    expect(workbench.install).to eq(:created)
+    expect(File.binread(File.join(root, workbench.destination))).to eq(ActiveAdmin::Themes::Workbench13.theme.source)
+    expect(workbench.instructions).to include('@import "./active_admin_workbench_13.css";')
+  end
+
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Workbench 2.x through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    workbench = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "workbench_2"
+    )
+
+    expect(workbench.install).to eq(:created)
+    expect(File.binread(File.join(root, workbench.destination))).to eq(ActiveAdmin::Themes::Workbench2.theme.source)
+    expect(workbench.instructions).to include('@import "./active_admin_workbench_2.css";')
+  end
+
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Workbench 3.x through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    workbench = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "workbench_3"
+    )
+
+    expect(workbench.install).to eq(:created)
+    expect(File.binread(File.join(root, workbench.destination))).to eq(ActiveAdmin::Themes::Workbench3.theme.source)
+    expect(workbench.instructions).to include('@import "./active_admin_workbench_3.css";')
+  end
+
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs MUI through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    mui = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "mui"
+    )
+
+    expect(mui.install).to eq(:created)
+    expect(File.binread(File.join(root, mui.destination))).to eq(ActiveAdmin::Themes::Mui.theme.source)
+    expect(mui.instructions).to include('@import "./active_admin_mui.css";')
+  end
+
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs AROS/Zune through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    aros_zune = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "aros_zune"
+    )
+
+    expect(aros_zune.install).to eq(:created)
+    expect(File.binread(File.join(root, aros_zune.destination))).to eq(ActiveAdmin::Themes::AROSZune.theme.source)
+    expect(aros_zune.instructions).to include('@import "./active_admin_aros_zune.css";')
+  end
+
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Haiku beta6 through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    haiku = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "haiku_beta6"
+    )
+
+    expect(haiku.install).to eq(:created)
+    expect(File.binread(File.join(root, haiku.destination))).to eq(ActiveAdmin::Themes::HaikuBeta6.theme.source)
+    expect(haiku.instructions).to include('@import "./active_admin_haiku_beta6.css";')
+  end
+
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Video Toaster 4000 through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    toaster = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "video_toaster_4000"
+    )
+
+    expect(toaster.install).to eq(:created)
+    expect(File.binread(File.join(root, toaster.destination))).to eq(ActiveAdmin::Themes::VideoToaster4000.theme.source)
+    expect(toaster.instructions).to include('@import "./active_admin_video_toaster_4000.css";')
+  end
+
+  # The complete installer boundary intentionally retains setup and its byte assertion together.
+  it "installs Mercury Flight through the same application-owned boundary" do # rubocop:disable RSpec/ExampleLength
+    mercury = described_class.new(
+      root: root, entrypoint: "admin.css", active_admin_version: "4.0.0.beta22", key: "mercury_flight"
+    )
+
+    expect(mercury.install).to eq(:created)
+    expect(File.binread(File.join(root, mercury.destination))).to eq(ActiveAdmin::Themes::MercuryFlight.theme.source)
+    expect(mercury.instructions).to include('@import "./active_admin_mercury_flight.css";')
+  end
+
   it "requires an existing entrypoint" do
     File.unlink(File.join(root, "admin.css"))
     expect { recipe }.to raise_error(ArgumentError, "styling entrypoint does not exist")

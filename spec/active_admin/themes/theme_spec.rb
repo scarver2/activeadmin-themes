@@ -80,4 +80,70 @@ RSpec.describe ActiveAdmin::Themes::Theme do
     expect(composition.class_for(:primary_action)).to eq("bluebonnet-primary-action")
     expect(composition.class_for(:data_heading)).to eq("bluebonnet-data-heading")
   end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers Workbench 1.3 as a fixed-presentation full theme" do # rubocop:disable RSpec/ExampleLength
+    workbench = ActiveAdmin::Themes::Workbench13.theme
+
+    expect([workbench.key, workbench.skin.key].map(&:to_s)).to eq(%w[workbench_13 workbench_13])
+    expect(workbench.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[workbench-13-launcher-art workbench-13-primary-window]
+    )
+    expect(workbench.source).to eq(ActiveAdmin::Themes::Recipes::Workbench13.source)
+  end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers Workbench 2.x as an independent fixed-presentation full theme" do # rubocop:disable RSpec/ExampleLength
+    workbench = ActiveAdmin::Themes::Workbench2.theme
+
+    expect([workbench.key, workbench.skin.key].map(&:to_s)).to eq(%w[workbench_2 workbench_2])
+    expect(workbench.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[workbench-2-launcher-art workbench-2-primary-window]
+    )
+    expect(workbench.source).to eq(ActiveAdmin::Themes::Recipes::Workbench2.source)
+  end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers Workbench 3.x as an independent fixed-presentation full theme" do # rubocop:disable RSpec/ExampleLength
+    workbench = ActiveAdmin::Themes::Workbench3.theme
+
+    expect([workbench.key, workbench.skin.key].map(&:to_s)).to eq(%w[workbench_3 workbench_3])
+    expect(workbench.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[workbench-3-launcher-art workbench-3-primary-window]
+    )
+    expect(workbench.source).to eq(ActiveAdmin::Themes::Recipes::Workbench3.source)
+  end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers MUI as an independent configurable-toolkit full theme" do # rubocop:disable RSpec/ExampleLength
+    mui = ActiveAdmin::Themes::Mui.theme
+
+    expect([mui.key, mui.skin.key].map(&:to_s)).to eq(%w[mui mui])
+    expect(mui.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[mui-launcher-art mui-primary-window]
+    )
+    expect(mui.source).to eq(ActiveAdmin::Themes::Recipes::Mui.source)
+  end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers AmigaOS 4 as an independent ReAction-era full theme" do # rubocop:disable RSpec/ExampleLength
+    amigaos = ActiveAdmin::Themes::AmigaOS4.theme
+
+    expect([amigaos.key, amigaos.skin.key].map(&:to_s)).to eq(%w[amigaos_4 amigaos_4])
+    expect(amigaos.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[amigaos-4-launcher-art amigaos-4-primary-window]
+    )
+    expect(amigaos.source).to eq(ActiveAdmin::Themes::Recipes::AmigaOS4.source)
+  end
+
+  # This public metadata contract intentionally keeps identity, slots, and source together.
+  it "registers Mercury Flight as an independent campaign-operations full theme" do # rubocop:disable RSpec/ExampleLength
+    mercury = ActiveAdmin::Themes::MercuryFlight.theme
+
+    expect([mercury.key, mercury.skin.key].map(&:to_s)).to eq(%w[mercury_flight mercury_flight])
+    expect(mercury.composition.slots.values_at(:launcher_art, :primary_window)).to eq(
+      %w[mercury-flight-launcher-art mercury-flight-primary-window]
+    )
+    expect(mercury.source).to eq(ActiveAdmin::Themes::Recipes::MercuryFlight.source)
+  end
 end

@@ -1,0 +1,67 @@
+/* lib/active_admin/themes/recipes/mercury_flight/components/launchers.css */
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-launcher-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+body[data-activeadmin-theme="mercury_flight"] a.mercury-flight-launcher {
+  align-items: center;
+  background: var(--mercury-flight-paper);
+  border: 1px solid var(--mercury-flight-border);
+  border-left: 0.28rem solid var(--mercury-flight-coral);
+  box-shadow: 0 2px 5px rgb(38 10 7 / 22%);
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: 42px minmax(90px, 1fr);
+  min-height: 64px;
+  min-width: 180px;
+  padding: 0.5rem 0.7rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="mercury_flight"] a.mercury-flight-launcher:hover {
+  background: var(--mercury-flight-paper-muted);
+  border-left-color: var(--mercury-flight-coral-dark);
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-launcher-art {
+  background: var(--mercury-flight-nav);
+  border-radius: 50%;
+  display: block;
+  height: 38px;
+  overflow: hidden;
+  position: relative;
+  width: 38px;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-launcher-art::before {
+  background: var(--mercury-flight-coral);
+  content: "";
+  height: 6px;
+  left: 7px;
+  position: absolute;
+  top: 17px;
+  transform: rotate(-18deg);
+  width: 25px;
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-launcher-art::after {
+  border-color: transparent transparent var(--mercury-flight-paper) transparent;
+  border-style: solid;
+  border-width: 0 0 10px 18px;
+  content: "";
+  left: 10px;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-18deg);
+}
+
+body[data-activeadmin-theme="mercury_flight"] .mercury-flight-launcher-group > p:last-child {
+  background: var(--mercury-flight-nav);
+  border-left: 0.28rem solid var(--mercury-flight-coral);
+  color: var(--mercury-flight-nav-text);
+  margin-left: auto !important;
+  padding: 0.6rem 0.75rem;
+}

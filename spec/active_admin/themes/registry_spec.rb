@@ -8,6 +8,12 @@ RSpec.describe ActiveAdmin::Themes::Registry do
   subject(:registry) { described_class.new }
 
   let(:theme) { ActiveAdmin::Themes::V3.theme }
+  let(:catalog_keys) do
+    %w[
+      v3 texas_bluebonnet workbench_13 workbench_2 workbench_3 mui amigaos_4 aros_zune haiku_beta6
+      video_toaster_4000 mercury_flight
+    ]
+  end
 
   it "registers and fetches a theme by string or symbol key" do
     registry.register(theme)
@@ -27,8 +33,7 @@ RSpec.describe ActiveAdmin::Themes::Registry do
   end
 
   it "exposes the default v3 catalog" do
-    expect(ActiveAdmin::Themes.registry.fetch(:v3).key).to eq(:v3)
-    expect(ActiveAdmin::Themes.registry.fetch(:texas_bluebonnet).key).to eq(:texas_bluebonnet)
+    expect(catalog_keys.map { |key| ActiveAdmin::Themes.registry.fetch(key).key.to_s }).to eq(catalog_keys)
   end
 
   it "rejects unknown theme keys" do
@@ -39,6 +44,6 @@ RSpec.describe ActiveAdmin::Themes::Registry do
     first = ActiveAdmin::Themes.registry
     second = ActiveAdmin::Themes.registry
     first.register(theme.with(key: :custom))
-    expect(second.keys).to eq(%i[v3 texas_bluebonnet])
+    expect(second.keys.map(&:to_s)).to eq(catalog_keys)
   end
 end

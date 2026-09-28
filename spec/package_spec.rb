@@ -21,7 +21,53 @@ RSpec.describe "Built recipe package" do
       components/navigation components/actions components/data components/support
       surfaces/workspace hardening/responsive hardening/preferences
     ].map { |part| "lib/active_admin/themes/recipes/texas_bluebonnet/#{part}.css" }
-    v3 + bluebonnet
+    workbench = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/workbench_13/#{part}.css" }
+    workbench2 = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/workbench_2/#{part}.css" }
+    workbench3 = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/workbench_3/#{part}.css" }
+    mui = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/mui/#{part}.css" }
+    amigaos4 = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/amigaos_4/#{part}.css" }
+    aros_zune = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/aros_zune/#{part}.css" }
+    haiku_beta6 = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/haiku_beta6/#{part}.css" }
+    video_toaster = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/video_toaster_4000/#{part}.css" }
+    mercury_flight = %w[
+      foundation/tokens foundation/base
+      components/navigation components/launchers components/windows components/data components/forms
+      surfaces/workspace hardening/responsive hardening/preferences
+    ].map { |part| "lib/active_admin/themes/recipes/mercury_flight/#{part}.css" }
+    v3 + bluebonnet + workbench + workbench2 + workbench3 + mui + amigaos4 + aros_zune + haiku_beta6 +
+      video_toaster + mercury_flight
   end
 
   # rubocop:disable-next RSpec/ExampleLength
@@ -30,7 +76,9 @@ RSpec.describe "Built recipe package" do
       specification = Gem::Specification.load("activeadmin-themes.gemspec")
       archive = Gem::Package.build(specification, false, false, File.join(directory, "theme.gem"))
       package = Gem::Package.new(archive)
-      concern_files = package.contents.grep(%r{\Alib/active_admin/themes/recipes/(?:v3|texas_bluebonnet)/.*\.css\z})
+      recipes = "v3|texas_bluebonnet|workbench_13|workbench_2|workbench_3|mui|amigaos_4|aros_zune|haiku_beta6|" \
+                "video_toaster_4000|mercury_flight"
+      concern_files = package.contents.grep(%r{\Alib/active_admin/themes/recipes/(?:#{recipes})/.*\.css\z})
       expect(concern_files).to match_array(packaged_concerns)
       package.extract_files(File.join(directory, "unpacked"))
       output, status = Open3.capture2e(

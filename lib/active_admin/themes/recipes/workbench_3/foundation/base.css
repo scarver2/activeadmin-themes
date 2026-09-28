@@ -1,0 +1,36 @@
+/* lib/active_admin/themes/recipes/workbench_3/foundation/base.css */
+body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace {
+  background-color: var(--workbench-3-desktop);
+  background-image: repeating-conic-gradient(
+    color-mix(in srgb, var(--workbench-3-shadow) 18%, transparent) 0 25%,
+    transparent 0 50%
+  );
+  background-size: 4px 4px;
+  border: 2px solid var(--workbench-3-text);
+  color: var(--workbench-3-text);
+  font: 0.9375rem/1.3 ui-monospace, "Cascadia Mono", "Courier New", monospace;
+  isolation: isolate;
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace *,
+body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace *::before,
+body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace *::after {
+  box-sizing: border-box;
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body[data-activeadmin-theme="workbench-3"] .workbench-3-workspace
+  :is(a, button, input, select, summary, [tabindex]):focus-visible {
+  box-shadow: 0 0 0 3px var(--workbench-3-shine), 0 0 0 6px var(--workbench-3-shadow);
+  outline: 3px solid var(--workbench-3-active);
+  outline-offset: 3px;
+}

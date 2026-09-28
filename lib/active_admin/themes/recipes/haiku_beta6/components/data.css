@@ -1,0 +1,64 @@
+/* lib/active_admin/themes/recipes/haiku_beta6/components/data.css */
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-status {
+  color: var(--haiku-beta6-muted);
+  font-size: 0.8rem;
+  margin-bottom: 0.85rem;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-data-region {
+  background: var(--haiku-beta6-document);
+  border: 1px solid var(--haiku-beta6-border);
+  border-radius: var(--haiku-beta6-radius);
+  box-shadow: inset 1px 1px 2px rgb(17 17 17 / 12%);
+  overflow-x: auto;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-data-table {
+  border-collapse: collapse;
+  color: inherit;
+  font: inherit;
+  min-width: 36rem;
+  width: 100%;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-data-table caption {
+  color: var(--haiku-beta6-muted);
+  font-size: 0.75rem;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-data-table :is(th, td) {
+  border-bottom: 1px solid color-mix(in srgb, var(--haiku-beta6-border) 65%, var(--haiku-beta6-document));
+  font-weight: 400;
+  padding: 0.5rem 0.55rem;
+  text-align: left;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-data-table thead {
+  background: linear-gradient(to bottom, var(--haiku-beta6-panel-soft), var(--haiku-beta6-control));
+  border-bottom: 1px solid var(--haiku-beta6-shadow);
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-data-table th a {
+  align-items: center;
+  display: inline-flex;
+  font-weight: 700;
+  min-height: 32px;
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-data-table tbody tr:focus-within,
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-data-table tbody tr:hover {
+  background: var(--haiku-beta6-highlight);
+  color: var(--haiku-beta6-selection-text);
+}
+
+body[data-activeadmin-theme="haiku_beta6"] .haiku-beta6-status-tag {
+  background: var(--haiku-beta6-panel-soft);
+  border: 1px solid var(--haiku-beta6-border);
+  border-left: 0.35rem solid var(--haiku-beta6-highlight);
+  border-radius: var(--haiku-beta6-radius);
+  font-size: 0.8rem;
+  padding: 0.12rem 0.38rem;
+  white-space: nowrap;
+}

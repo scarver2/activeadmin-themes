@@ -1,0 +1,78 @@
+/* lib/active_admin/themes/recipes/aros_zune/components/launchers.css */
+body[data-activeadmin-theme="aros_zune"] .aros-zune-launcher-group {
+  align-items: start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--aros-zune-object-gap);
+  margin-bottom: 1.25rem;
+}
+
+body[data-activeadmin-theme="aros_zune"] a.aros-zune-launcher {
+  background: linear-gradient(to bottom, var(--aros-zune-field), var(--aros-zune-surface));
+  border-color: var(--aros-zune-shine) var(--aros-zune-deep-shadow) var(--aros-zune-deep-shadow)
+    var(--aros-zune-shine);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: var(--aros-zune-frame-radius);
+  box-shadow: 0 2px 3px rgb(32 41 51 / 24%);
+  display: grid;
+  gap: 0.4rem;
+  justify-items: center;
+  min-width: 118px;
+  padding: 0.7rem;
+  text-decoration: none;
+}
+
+body[data-activeadmin-theme="aros_zune"] a.aros-zune-launcher:hover {
+  background: var(--aros-zune-selection);
+  color: var(--aros-zune-text);
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-launcher-art {
+  background: var(--aros-zune-active-soft);
+  border-color: var(--aros-zune-shine) var(--aros-zune-deep-shadow) var(--aros-zune-deep-shadow)
+    var(--aros-zune-shine);
+  border-style: solid;
+  border-width: 2px;
+  border-radius: var(--aros-zune-inner-radius);
+  display: block;
+  height: 42px;
+  position: relative;
+  width: 64px;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-launcher-art::before {
+  background: var(--aros-zune-surface);
+  border: 1px solid var(--aros-zune-deep-shadow);
+  content: "";
+  height: 24px;
+  left: 6px;
+  position: absolute;
+  top: 5px;
+  width: 18px;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-launcher-art::after {
+  background:
+    linear-gradient(to bottom, var(--aros-zune-active) 0 45%, transparent 45% 55%, var(--aros-zune-accent) 55%);
+  border: 1px solid var(--aros-zune-deep-shadow);
+  content: "";
+  height: 22px;
+  position: absolute;
+  right: 7px;
+  top: 10px;
+  width: 30px;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-launcher-group > p:last-child {
+  background: var(--aros-zune-field);
+  border: 1px solid var(--aros-zune-shadow);
+  border-radius: var(--aros-zune-inner-radius);
+  margin-left: auto !important;
+  padding: 0.4rem;
+  text-align: right;
+}
+
+body[data-activeadmin-theme="aros_zune"] .aros-zune-launcher-group > p:last-child small {
+  font-size: 0.75rem;
+}

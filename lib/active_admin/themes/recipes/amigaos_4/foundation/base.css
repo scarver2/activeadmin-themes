@@ -1,0 +1,34 @@
+/* lib/active_admin/themes/recipes/amigaos_4/foundation/base.css */
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace {
+  background:
+    radial-gradient(circle at 18% 5%, rgb(255 255 255 / 18%), transparent 34%),
+    linear-gradient(145deg, var(--amigaos-4-desktop), var(--amigaos-4-desktop-deep));
+  border: 1px solid var(--amigaos-4-deep-shadow);
+  color: var(--amigaos-4-text);
+  font: 0.9375rem/1.4 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  isolation: isolate;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace *,
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace *::before,
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace *::after {
+  box-sizing: border-box;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, currentcolor 62%, transparent);
+  text-underline-offset: 3px;
+}
+
+body[data-activeadmin-theme="amigaos_4"] .amigaos-4-workspace
+  :is(a, button, input, select, summary, [tabindex]):focus-visible {
+  box-shadow: 0 0 0 3px var(--amigaos-4-shine), 0 0 0 6px var(--amigaos-4-active-deep);
+  outline: 3px solid var(--amigaos-4-accent);
+  outline-offset: 3px;
+}
