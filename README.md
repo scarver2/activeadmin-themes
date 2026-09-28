@@ -8,6 +8,8 @@ Explicit, inspectable visual theme recipes for ActiveAdmin 4.
 
 Requiring `activeadmin-themes` does **not** restyle a Rails application. Hosts explicitly install a recipe, own the resulting CSS file, and add its import to their existing Tailwind entrypoint.
 
+The source currently identifies as `0.2.0`. No gem release has been published.
+
 The first registered theme is `:v3`: ActiveAdmin 3.5-inspired hierarchy, density, and polish implemented on ActiveAdmin 4's Tailwind-era foundation—not copied legacy CSS.
 
 ```ruby
